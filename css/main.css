@@ -1,0 +1,204 @@
+/* https://css-tricks.com/snippets/css/using-font-face/ */
+@font-face {
+  font-family: 'Clarendon';
+  src: url('../fonts/ClarendonCondensedBT.ttf');
+}
+@font-face {
+  font-family: 'VeneerTwo';
+  src: url('../fonts/veneer-two.otf');
+}
+@font-face {
+  font-family: 'RangeMono-Reg';
+  src: url('../fonts/range-mono.ttf');
+}
+@font-face {
+  font-family: 'RangeMono-Light';
+  src: url('../fonts/range-mono-light.ttf');
+}
+
+
+/* 
+  PAGE ELEMENTS -------------------
+*/
+html {
+  font-size: 14px;
+}
+body {
+  font-family: 'RangeMono-Light';
+  color: #2a2a30;
+  font-size: 1rem;
+  padding: 2rem;
+  background-color: #E8EBEB;
+}
+
+section:not([id]) {
+  margin: 1em 0;
+  padding: 0.5em 0;
+  border-top: 1px solid #333;
+}
+
+.block {
+display: inline-block;
+max-width: 400px;
+padding: 2rem;
+}
+
+#top {
+  padding: 1em 1em;
+  min-height: 4.5rem;
+  box-shadow: 0 1px 2px #2a2a30;
+}
+#top, nav {
+  background-color: #2a2a30;
+}
+#top nav {
+  float: right;
+  display: inline-block;
+}
+#top h1 {
+  display: inline;
+  font-family: 'Clarendon';
+  color: #d4c090;
+  padding: 0.5em 0.75em;
+}
+
+.bold {
+  font-family: 'RangeMono-Reg';
+  display: inline-block;
+}
+
+img {
+  border: 1px solid #4c585d;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+/* 
+  TEXT ELEMENTS -------------------
+*/
+p{
+  display: inline;
+}
+section h1, section h2, section h3 {
+  font-family: 'VeneerTwo';
+}
+section h1{
+  font-size: 2.5rem;
+  color: #2a2a30;
+}
+section h2{
+  font-size: 2rem;
+  color: #4c585d;
+}
+section h3{
+  font-size: 1.5rem;
+  color: #72848a;
+}
+section code {
+  background-color: #d9dede;
+  font-family: 'RangeMono-Light';
+  padding: 0.5rem 0.75rem;
+  position: relative;
+  /* https://krasimirtsonev.com/blog/article/CSS-The-background-color-and-overlapping-rows-inline-element */
+  display: block;
+  /* https://www.w3schools.com/cssref/pr_text_white-space.asp */
+  white-space: pre-line;
+}
+
+
+/* 
+  INTERACTIVE ELEMENTS -------------------
+*/
+
+.button-nav {
+  display: inline-block;
+  font-family: 'RangeMono-Reg';
+  padding: 0.5em 0.75em;
+  color: #d4c090;
+  text-decoration: none;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.button-nav:hover, .button-nav:focus {
+  color: #b1a071;
+}
+
+.button-form {
+  display: block;
+  font-family: 'VeneerTwo';
+  font-size: 1.25rem;
+  padding: 0.5em 0.75em;
+  margin-top: 2rem;
+  color: #E8EBEB;
+  background-color: #4c585d;
+  /* border-radius: 1px; */
+  box-shadow: 0 1px 2px #2a2a30;
+  text-decoration: none;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.button-form:hover, .button-form:focus {
+  display: block;
+  font-family: 'VeneerTwo';
+  background-color: #72848a;
+  color: #E8EBEB;
+}
+
+a {
+  font-family: 'RangeMono-Reg';
+  color: #b1a071;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+a:hover, a:focus {
+  font-family: 'RangeMono-Reg';
+  color: #d4c090;
+}
+
+input {
+  background-color: white;
+  font-family: 'RangeMono-Reg';
+  font-size: 1rem;
+  padding: 0.5em 0.75em;
+  border: 1px solid #4c585d;
+}
+
+select {
+  background-color: white;
+  font-family: 'RangeMono-Reg';
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5em 0.75em;
+  border: 1px solid #4c585d;
+  border-right: 32px solid #4c585d;
+  box-shadow: 0 1px 2px #2a2a30;
+  border-radius: 0px;
+  /* http://jsfiddle.net/fMuPt/ */
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+
+/* https://stackoverflow.com/questions/3532649/problem-with-select-and-after-with-css-in-webkit */
+.selectWrap {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  margin: auto
+}
+.selectWrap::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  right: 9px;
+  top: 12px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid white;
+  clear: both;
+}
+
+/* 
+  COMBINED ELEMENTS -------------------
+*/
