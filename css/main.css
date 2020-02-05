@@ -18,6 +18,8 @@ Load Fonts -------------------
   src: url('../fonts/range-mono-light.ttf');
 }
 
+
+
 /*
 PAGE ELEMENTS -------------------
 */
@@ -51,6 +53,17 @@ html {
   padding: 1rem;
 }
 
+.flex-container-4 >div {
+  background-color: white;
+
+}
+
+.flex-container-5 >div {
+  background-color: white;
+
+  padding: 1rem;
+}
+
 .test-container{
   flex:1;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -58,6 +71,14 @@ html {
   margin: 1.5em;
   text-align: center;
   font-family: "gotham";
+}
+
+/*
+Widgets ELEMENTS -------------------
+*/
+
+.space{
+  flex:  1 1 0px;
 }
 
 .title{
@@ -70,7 +91,7 @@ html {
   display: flex;
   flex: 1 0 0;
   position: relative;
-  min-height: 636.344px;
+  flex-direction: column;
   max-width: 10%;
   border: 1px solid black;
   background-position: top center;
@@ -81,18 +102,50 @@ html {
   display: flex;
   flex: 1 0 0;
   position: relative;
-  min-height: 636.344px;
-  max-width: 80%;
+flex-direction: row;
   border: 1px solid black;
   background-position: top center;
   background-color: #72848A;
 }
+
+.ad-space-2{
+  display: flex;
+  flex: 1 0 0;
+flex-direction: column;
+  border: 1px solid black;
+
+  background-position: top center;
+  background-color: #72848A;
+}
+
+.mini-ads{
+  display: flex;
+  flex: 1 0 0;
+flex-direction: column;
+  border: 1px solid black;
+  margin: 0px;
+  padding: 2rem;
+
+  background-position: top center;
+  background-color: #72848A;
+}
+
 .ad-space-discover{
   display: flex;
-column-fill:  100%;
+  column-fill:  100%;
   position: relative;
   width: 100%;
   border: 1px solid black;
+}
+
+.footer-block{
+  display: flex;
+  column-fill:  100%;
+  position: relative;
+  width: 100%;
+  min-height: 150px;
+  border: 1px solid black;
+  padding-bottom: 4rem;
 }
 
 .product-card-box{
@@ -105,7 +158,12 @@ column-fill:  100%;
   background-color: #E8EBEB;
   margin-left: 2rem;
   margin-right: 2rem;
+
 }
+
+/*
+Headings ELEMENTS -------------------
+*/
 
 .headings1-product{
   font-size: 4rem;
@@ -143,6 +201,10 @@ column-fill:  100%;
 
 }
 
+/*
+Buttons ELEMENTS -------------------
+*/
+
 .button-product{
   display: inline-block;
   background-color:  #522B47;
@@ -159,15 +221,14 @@ column-fill:  100%;
   opacity: 0.7;
 }
 
-.space{
-  flex:  1 1 0px;
-}
-
 .navigation-buttons{
   font-size: 2rem;
   font-family: 'Clarendon';
   border: 3px solid #8AC007;
   display: flex;
+position: relative;
+top:50%;
+
 }
 
 .navigation-buttons span {
