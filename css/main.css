@@ -1,4 +1,6 @@
-/* https://css-tricks.com/snippets/css/using-font-face/ */
+/*
+Load Fonts -------------------
+*/
 @font-face {
   font-family: 'Clarendon';
   src: url('../fonts/ClarendonCondensedBT.ttf');
@@ -16,189 +18,158 @@
   src: url('../fonts/range-mono-light.ttf');
 }
 
-
-/* 
-  PAGE ELEMENTS -------------------
+/*
+PAGE ELEMENTS -------------------
 */
 html {
-  font-size: 14px;
-}
-body {
-  font-family: 'RangeMono-Light';
-  color: #2a2a30;
-  font-size: 1rem;
-  padding: 2rem;
   background-color: #E8EBEB;
+  font-size: 8px;
 }
 
-section:not([id]) {
-  margin: 1em 0;
-  padding: 0.5em 0;
-  border-top: 1px solid #333;
+.flex-container-1, .flex-container-2, .flex-container-3,
+.flex-container-4, .flex-container-5{
+  display:flex;
 }
 
-.block {
-display: inline-block;
-max-width: 400px;
-padding: 2rem;
-}
-
-#top {
-  padding: 1em 1em;
-  min-height: 4.5rem;
-  box-shadow: 0 1px 2px #2a2a30;
-}
-#top, nav {
-  background-color: #2a2a30;
-}
-#top nav {
-  float: right;
-  display: inline-block;
-}
-#top h1 {
-  display: inline;
+.flex-container-1 >div {
   font-family: 'Clarendon';
-  color: #d4c090;
-  padding: 0.5em 0.75em;
+
+  background-color: #2A2A30;
+  color: #B1A071;
+  padding: 1rem;
 }
 
-.bold {
-  font-family: 'RangeMono-Reg';
-  display: inline-block;
+.flex-container-2 >div {
+  background-color: white;
+
+  padding: 1rem;
 }
 
-img {
-  border: 1px solid #4c585d;
-  display: block;
-  margin-bottom: 2rem;
+.flex-container-3 >div {
+  background-color: white;
+
+  padding: 1rem;
 }
 
-/* 
-  TEXT ELEMENTS -------------------
-*/
-p{
-  display: inline;
+.test-container{
+  flex:1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 1.5em;
+  text-align: center;
+  font-family: "gotham";
 }
-section h1, section h2, section h3 {
-  font-family: 'VeneerTwo';
+
+.title{
+  flex: 1 0 200px;
+  min-height: 56px;
+  font-size: 4rem;
 }
-section h1{
-  font-size: 2.5rem;
-  color: #2a2a30;
-}
-section h2{
-  font-size: 2rem;
-  color: #4c585d;
-}
-section h3{
-  font-size: 1.5rem;
-  color: #72848a;
-}
-section code {
-  background-color: #d9dede;
-  font-family: 'RangeMono-Light';
-  padding: 0.5rem 0.75rem;
+
+.ad-space-margin{
+  display: flex;
+  flex: 1 0 0;
   position: relative;
-  /* https://krasimirtsonev.com/blog/article/CSS-The-background-color-and-overlapping-rows-inline-element */
-  display: block;
-  /* https://www.w3schools.com/cssref/pr_text_white-space.asp */
-  white-space: pre-line;
+  min-height: 636.344px;
+  max-width: 10%;
+  border: 1px solid black;
+  background-position: top center;
+  background-color: #72848A;
 }
 
-
-/* 
-  INTERACTIVE ELEMENTS -------------------
-*/
-
-.button-nav {
-  display: inline-block;
-  font-family: 'RangeMono-Reg';
-  padding: 0.5em 0.75em;
-  color: #d4c090;
-  text-decoration: none;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
+.ad-space{
+  display: flex;
+  flex: 1 0 0;
+  position: relative;
+  min-height: 636.344px;
+  max-width: 80%;
+  border: 1px solid black;
+  background-position: top center;
+  background-color: #72848A;
 }
-.button-nav:hover, .button-nav:focus {
-  color: #b1a071;
-}
-
-.button-form {
-  display: block;
-  font-family: 'VeneerTwo';
-  font-size: 1.25rem;
-  padding: 0.5em 0.75em;
-  margin-top: 2rem;
-  color: #E8EBEB;
-  background-color: #4c585d;
-  /* border-radius: 1px; */
-  box-shadow: 0 1px 2px #2a2a30;
-  text-decoration: none;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-}
-.button-form:hover, .button-form:focus {
-  display: block;
-  font-family: 'VeneerTwo';
-  background-color: #72848a;
-  color: #E8EBEB;
-}
-
-a {
-  font-family: 'RangeMono-Reg';
-  color: #b1a071;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-}
-a:hover, a:focus {
-  font-family: 'RangeMono-Reg';
-  color: #d4c090;
-}
-
-input {
-  background-color: white;
-  font-family: 'RangeMono-Reg';
-  font-size: 1rem;
-  padding: 0.5em 0.75em;
-  border: 1px solid #4c585d;
-}
-
-select {
-  background-color: white;
-  font-family: 'RangeMono-Reg';
+.ad-space-discover{
+  display: flex;
+column-fill:  100%;
+  position: relative;
   width: 100%;
-  font-size: 1rem;
-  padding: 0.5em 0.75em;
-  border: 1px solid #4c585d;
-  border-right: 32px solid #4c585d;
-  box-shadow: 0 1px 2px #2a2a30;
-  border-radius: 0px;
-  /* http://jsfiddle.net/fMuPt/ */
-  -webkit-appearance: none;
-  -webkit-border-radius: 0px;
+  border: 1px solid black;
 }
 
-/* https://stackoverflow.com/questions/3532649/problem-with-select-and-after-with-css-in-webkit */
-.selectWrap {
-  position: relative;
+.product-card-box{
+  max-width: 25rem;
+  margin-bottom: auto;
+  text-align: center;
+  font-family: 'Public Sans', sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  background-color: #E8EBEB;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.headings1-product{
+  font-size: 4rem;
+  font-family: 'Quantico', sans-serif;
+  font-weight: bold;
+  text-align:center;
+  text-decoration: none;
+  margin-left: 0;
+  padding: 0;
   display: inline-block;
-  max-width: 100%;
-  margin: auto
-}
-.selectWrap::after {
-  content: '';
-  pointer-events: none;
-  position: absolute;
-  right: 9px;
-  top: 12px;
-  width: 0;
-  height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 7px solid white;
-  clear: both;
+  line-height: 1em;
+  height: 1.5em;
+
 }
 
-/* 
-  COMBINED ELEMENTS -------------------
-*/
+.headings2-product{
+  font-size: 3rem;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  margin:  0;
+  padding: 0;
+}
+
+.paragraph-product{
+  font-family: 'Public Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  padding: 1rem;
+  display: inline-block;
+
+}
+
+.button-product{
+  display: inline-block;
+  background-color:  #522B47;
+
+  text-align: center;
+  font-size: 4rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.button-product:hover, .button-product:focus {
+  opacity: 0.7;
+}
+
+.space{
+  flex:  1 1 0px;
+}
+
+.navigation-buttons{
+  font-size: 2rem;
+  font-family: 'Clarendon';
+  border: 3px solid #8AC007;
+  display: flex;
+}
+
+.navigation-buttons span {
+  align-self: flex-end;
+}
