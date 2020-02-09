@@ -30,8 +30,15 @@ body {
 }
 .title {
   font-size: 3rem;
+  font-family: 'Clarendon';
   color: #D4C090;
   text-decoration: none;
+}
+.title:hover, .title:focus {
+  font-size: 3rem;
+  font-family: 'Clarendon';
+  text-decoration: none;
+  color: #b1a071;
 }
 h1, h2, h3 {
   font-family: 'VeneerTwo';
@@ -49,13 +56,17 @@ h3{
   color: #72848a;
 }
 
-.flex-container-1, .flex-container-2, .flex-container-3,
-.flex-container-4, .flex-container-5{
+nav {
+  background-color: #2A2A30;
+  align-self: center;
+}
+
+.navBar, .banner, .mainContainer, footer{
   display:flex;
   min-height: 56px;
 }
 
-.flex-container-1 {
+.navBar {
   font-family: 'Clarendon';
   background-color: #2A2A30;
   color: #B1A071;
@@ -63,55 +74,41 @@ h3{
   justify-content: space-between;
 }
 
-.flex-container-2 {
-  background-color: white;
+.banner {
+  background-color: green;
   padding: 1rem;
 }
 
-.flex-container-3 >div {
-  background-color: white;
+.mainContainer {
+  /* background-color: white; */
   padding: 1rem;
 }
 
-.flex-container-4 >div {
-  background-color: white;
-}
-
-.flex-container-5 >div {
+footer {
+  width: 100%;
+  position: relative;
+  bottom: 0;
   background-color: #D9DEDE;
-  padding: 1rem;
   border: none;
-}
-
-.test-container{
-  flex:1;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: 1.5em;
-  text-align: center;
-  font-family: "gotham";
+  margin-top: 2rem;
 }
 
 /*
 Widgets ELEMENTS -------------------
 */
 
-.space{
-  flex:  1 1 0px;
-}
-
-.ad-space-margin{
+.sideMargin{
   display: flex;
   flex: 1 0 0;
   position: relative;
   flex-direction: column;
-  /* max-width: 10%; */
   border: 1px solid black;
+  min-width: 10%;
   background-position: top center;
   background-color: #72848A;
 }
 
-.ad-space{
+.banner2, .banner2-column, .banner3{
   display: flex;
   flex: 1 0 0;
   position: relative;
@@ -119,127 +116,141 @@ Widgets ELEMENTS -------------------
   border: 1px solid black;
   background-position: top center;
   background-color: #72848A;
+  min-width: 40%;
+  max-width: 500px;
 }
 
-.ad-space-2{
-  display: flex;
-  flex: 1 0 0;
+.banner2-column{
   flex-direction: column;
-  border: 1px solid black;
-  background-position: top center;
-  background-color: #72848A;
+  min-width: 40%;
+  max-width: 500px;
 }
 
-.mini-ads{
-  display: flex;
-  flex: 1 0 0;
+.banner3{
   flex-direction: column;
-  border: 1px solid black;
   margin: 0px;
   padding: 2rem;
-  background-position: top center;
-  background-color: #72848A;
-}
-
-.ad-space-discover{
-  display: flex;
-  column-fill:  100%;
-  position: relative;
-  width: 100%;
-  border: 1px solid black;
-}
-
-.footer-block{
-  display: flex;
-  column-fill:  100%;
-  position: relative;
-  width: 100%;
-  min-height: 150px;
-  border: 1px solid black;
-  padding-bottom: 4rem;
+  max-width: 100%;
 }
 
 .product-card-box{
-  max-width: 25rem;
+  /* max-width: 25rem; */
   margin-bottom: auto;
   text-align: center;
-  font-family: 'Public Sans', sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 1rem;
-  background-color: #E8EBEB;
+  background-color: white;
   margin-left: 2rem;
   margin-right: 2rem;
+}
 
+.fullColumn, .halfColumn {
+  border: 1px solid black;
+  background-position: top center;
+  min-width: 80%;
+  max-width: 1000px;
+}
+.halfColumn {
+  min-width: 40%;
+  max-width: 500px;
 }
 
 /*
-Headings ELEMENTS -------------------
+Buttons/Forms ELEMENTS -------------------
 */
 
-.headings1-product{
-  font-size: 2.5rem;
-  font-family: 'Quantico', sans-serif;
-  font-weight: bold;
-  text-align:center;
-  text-decoration: none;
-  margin-left: 0;
-  padding: 0;
+.button-nav {
   display: inline-block;
-  line-height: 1em;
-  height: 1.5em;
-
-}
-
-.headings2-product{
-  font-size: 2rem;
-  font-family: 'Public Sans', sans-serif;
-  font-weight: normal;
-  text-align: center;
+  font-family: 'RangeMono-Reg';
+  padding: 0.5em 0.75em;
+  color: #d4c090;
   text-decoration: none;
-  margin:  0;
-  padding: 0;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.button-nav:hover, .button-nav:focus {
+  color: #b1a071;
 }
 
-.paragraph-product{
-  font-family: 'Public Sans', sans-serif;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: center;
+.button-form {
+  display: block;
+  font-family: 'VeneerTwo';
+  font-size: 1.25rem;
+  padding: 0.5em 0.75em;
+  margin-top: 2rem;
+  color: #E8EBEB;
+  background-color: #4c585d;
+  /* border-radius: 1px; */
+  box-shadow: 0 1px 2px #2a2a30;
   text-decoration: none;
-  display: flex;
-  padding: 1rem;
-  display: inline-block;
-
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.button-form:hover, .button-form:focus {
+  display: block;
+  font-family: 'VeneerTwo';
+  background-color: #72848a;
+  color: #E8EBEB;
 }
 
-/*
-Buttons ELEMENTS -------------------
-*/
-
-.button-product{
-  display: inline-block;
-  background-color:  #522B47;
-
-  text-align: center;
-  font-size: 2rem;
-  text-decoration: none;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-}
-
-.button-product:hover, .button-product:focus {
-  opacity: 0.7;
-}
-
-nav {
-  background-color: #2A2A30;
-  align-self: center;
-}
-.nav-button{
+.button-nav{
   font-size: 1.25rem;
   font-family: 'RangeMono-Reg';
   color: #D4C090;
   text-decoration: none;
   margin-left: 1rem;
+}
+
+a {
+  font-family: 'RangeMono-Reg';
+  color: #b1a071;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+a:hover, a:focus {
+  font-family: 'RangeMono-Reg';
+  color: #d4c090;
+}
+
+input {
+  background-color: white;
+  font-family: 'RangeMono-Reg';
+  font-size: 1rem;
+  padding: 0.5em 0.75em;
+  border: 1px solid #4c585d;
+}
+
+select {
+  background-color: white;
+  font-family: 'RangeMono-Reg';
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5em 0.75em;
+  border: 1px solid #4c585d;
+  border-right: 32px solid #4c585d;
+  box-shadow: 0 1px 2px #2a2a30;
+  border-radius: 0px;
+  /* http://jsfiddle.net/fMuPt/ */
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+/* https://stackoverflow.com/questions/3532649/problem-with-select-and-after-with-css-in-webkit */
+.selectWrap {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  margin: auto
+}
+.selectWrap::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  right: 9px;
+  top: 12px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid white;
+  clear: both;
 }
