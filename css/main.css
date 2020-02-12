@@ -49,9 +49,9 @@ p {
   display: inline;
   font-family: 'RangeMono-Light';
 
-    padding-left: 1rem;
-    padding-right: 2rem;
-    margin-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  margin-top: 1rem;
 }
 
 .bold {
@@ -101,8 +101,8 @@ nav {
 
 
 .mainContainer {
-  background-color: white;
   display:flex;
+  margin-bottom: 5rem;
 }
 
 
@@ -118,9 +118,12 @@ footer {
 /*
 Widgets ELEMENTS -------------------
 */
+.bodyWrapper {
+  max-width:1080px;
+  margin: 0 auto;
+}
 
 #sort{
-
   margin-left: 10rem;
   margin-right: 25rem;
 }
@@ -134,6 +137,17 @@ Widgets ELEMENTS -------------------
   display: flex;
   flex-direction: column;
   margin: 1rem;
+}
+
+.aboutus-textfield-box{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+position: relative;
+top:50%;
+transform: translateY(-50%);
+  max-width: 25rem;
 }
 
 .sideMargin{
@@ -168,7 +182,7 @@ Widgets ELEMENTS -------------------
 
 .banner2{
   background-color: white;
-  width: 40%;
+  width: 50%;
   flex-direction: column;
 }
 
@@ -179,10 +193,10 @@ Widgets ELEMENTS -------------------
 }
 
 .banner2-column{
-  background-color: white;
+
   max-height:412px;
   flex-direction: column;
-  width: 40%;
+  width: 50%;
 }
 
 .banner2-column-images{
