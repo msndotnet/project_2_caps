@@ -28,6 +28,7 @@ html {
 
 body {
   margin:0;
+  min-height: 100%;
 }
 .title {
   font-size: 3rem;
@@ -40,6 +41,13 @@ body {
   font-family: 'Clarendon';
   text-decoration: none;
   color: #b1a071;
+}
+p {
+  display: inline;
+  font-family: 'RangeMono-Light';
+}
+.bold {
+  font-family: 'RangeMono-Reg';
 }
 h1, h2, h3 {
   font-family: 'VeneerTwo';
@@ -101,7 +109,7 @@ Widgets ELEMENTS -------------------
   position: relative;
   flex-direction: column;
   border: 1px solid black;
-  min-width: 10%;
+  /* min-width: 10%; */
   background-position: top center;
   background-color: white;
 }
@@ -153,7 +161,7 @@ object-fit: cover;
 
 
 .product-card-box{
-  /* max-width: 25rem; */
+  max-width: 20%;
   padding: 2rem;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -193,7 +201,7 @@ Buttons/Forms ELEMENTS -------------------
   color: #b1a071;
 }
 
-.button-form {
+.button-form, .button-help {
   display: block;
   font-family: 'VeneerTwo';
   font-size: 1.25rem;
@@ -208,7 +216,7 @@ Buttons/Forms ELEMENTS -------------------
   transition: all 0.25s;
 }
 
-.button-form:hover, .button-form:focus {
+.button-form:hover, .button-form:focus, .button-help:hover, .button-help:focus {
   display: block;
   font-family: 'VeneerTwo';
   background-color: #72848a;
@@ -222,6 +230,21 @@ Buttons/Forms ELEMENTS -------------------
   text-decoration: none;
   margin-left: 1rem;
 }
+.button-help{
+  border-radius: 100px;
+  height: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  display: inline-block;
+}
+.button-help:hover, .button-help:focus {
+  border-radius: 100px;
+  height: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  display: inline-block;
+}
+
 
 a {
   font-family: 'RangeMono-Reg';
@@ -239,7 +262,9 @@ input {
   font-family: 'RangeMono-Reg';
   font-size: 1rem;
   padding: 0.5em 0.75em;
+  margin-right: 0;
   border: 1px solid #4c585d;
+  width: calc(100% - 1.5rem);
 }
 
 
@@ -262,6 +287,7 @@ select {
   position: relative;
   display: inline-block;
   max-width: 100%;
+  width: 75%;
   margin: auto
 }
 .selectWrap::after {
@@ -276,4 +302,32 @@ select {
   border-right: 7px solid transparent;
   border-top: 7px solid white;
   clear: both;
+}
+
+/*
+	Ratings Stars
+  (with as little code as possible)
+  https://css-tricks.com/star-ratings/
+*/
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: left;
+  font-size: 1.75rem;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover,
+.rating > span:hover ~ span {
+  color: transparent;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+   left: 0; 
+   color: #D4C090;
 }

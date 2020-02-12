@@ -1,73 +1,47 @@
 <!doctype html>
 <html lang="en">
-<head
-<meta charset="utf-8">
-<!--5 colums and 6 rows-->
-<link rel="stylesheet" href="css/main.css">
-</head>
+  <head> 
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
 
-<body>
-  <div class ="flex-container-1">
-    <div class = "title">Bermingham Brims</div>
-    <div class = "navigation-buttons">Shop</div>
-    <div class = "navigation-buttons">About</div>
-    <div class = "navigation-buttons">Help</div>
-  </div>
+  <body>
+    <div class="navBar">
+      <a class="title" href="index.html">Birmingham Brims</a>
+      <nav>
+        <a class="button-nav" href="shop.html">Shop</a>
+        <a class="button-nav" href="about.html">About</a>
+        <a class="button-nav" href="help.html">Help</a>
+      </nav>
+    </div>
 
-  <div class ="flex-container-2">
-    <div class = "ad-space-margin" > Blank</div>
-    <div class = "ad-space"> Main Ad</div>
-    <div class = "ad-space-margin" > Blank</div>
-  </div>
-
-  <div class ="flex-container-3">
-    <div class = "ad-space-margin" > Blank</div>
-    <div class = "ad-space">
-    <!--  <div class = "ad-space-discover">
-        <p>Discover Our Bermingham Classics</p>
-      </div>-->
-      <div class = "product-card-box">
-        <img src= " img/small/mens-vintage-traditional-tweed.jpg"
-        alt="cap" style="width:100%">
-        <p class="headings2-product">Premium Men's Flatcap</p>
-        <p class ="paragraph-product">
-          C$35</p>
+    <div class ="mainContainer">
+      <div class="sideMargin"></div>
+      <div class ="halfColumn">
+        <h1>Contact</h1>
+        <div class="selectWrap">
+          <select>
+          <option selected disabled>Issue Category</option>
+          <option value="s">Orders</option>
+          <option value="m">Product</option>
+          <option value="m">Website</option>
+          <option value="l">Other</option>
+          
+          </select>
         </div>
-
-        <div class = "product-card-box">
-          <img src= " img/small/mens-vintage-traditional-tweed.jpg"
-          alt="cap" style="width:100%">
-          <p class="headings2-product">Premium Men's Flatcap</p>
-          <p class ="paragraph-product">
-            C$35</p>
-          </div>
-
-          <div class = "product-card-box">
-            <img src= " img/mens-vintage-traditional-tweed.jpg"
-            alt="cap" style="width:100%">
-            <p class="headings2-product">Premium Men's Flatcap</p>
-            <p class ="paragraph-product">
-              C$35</p>
-            </div>
-
+        <input type="text" name="Textfield" placeholder="Name">
+        <input type="text" name="Textfield" placeholder="Email">
+        <input type="text" name="Textfield" placeholder="Message">
       </div>
-        <div class = "ad-space-margin" > Blank</div>
+      <div class ="halfColumn">
+        <a href="#" class="button-form">Submit</a>
       </div>
-
-      <div class ="flex-container-4">
-        <div class = "ad-space-margin" > Blank</div>
-        <div class = "ad-space"> Main Ad</div>
-        <div class = "ad-space-margin" > Blank</div>
-      </div>
-
-      <div class ="flex-container-5">
-        <div class = "ad-space-margin" > Blank</div>
-        <div class = "ad-space"> Main Ad</div>
-        <div class = "ad-space-margin" > Blank</div>
-      </div>
-
-
-
-    </body>
-
-    </html>
+      <div class="sideMargin"></div>
+    </div>
+    
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </body>
+</html>
