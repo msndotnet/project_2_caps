@@ -119,6 +119,12 @@ footer {
 Widgets ELEMENTS -------------------
 */
 
+#sort{
+
+  margin-left: 10rem;
+  margin-right: 25rem;
+}
+
 .description-box{
   display: flex;
   flex-direction: column;
