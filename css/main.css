@@ -99,12 +99,14 @@ nav {
   justify-content: space-between;
 }
 
-
 .mainContainer {
   display:flex;
   margin-bottom: 5rem;
 }
 
+#noMargin {
+  margin-bottom: 0rem;
+}
 
 footer {
   width: 100%;
@@ -123,11 +125,6 @@ Widgets ELEMENTS -------------------
   margin: 0 auto;
 }
 
-#sort{
-  margin-left: 10rem;
-  margin-right: 25rem;
-}
-
 .description-box{
   display: flex;
   flex-direction: column;
@@ -139,15 +136,13 @@ Widgets ELEMENTS -------------------
   margin: 1rem;
 }
 
-.aboutus-textfield-box{
-  display: flex;
-  flex-direction: column;
+.component-container{
   margin: 0 auto;
-
-position: relative;
-top:50%;
-transform: translateY(-50%);
-  max-width: 25rem;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width:1080px;
+  margin-bottom: 4rem;
 }
 
 .sideMargin{
@@ -193,7 +188,6 @@ transform: translateY(-50%);
 }
 
 .banner2-column{
-
   max-height:412px;
   flex-direction: column;
   width: 50%;
@@ -210,7 +204,6 @@ transform: translateY(-50%);
   padding: 2rem;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 1rem;
   background-color: white;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -228,6 +221,11 @@ transform: translateY(-50%);
 .halfColumn {
   min-width: 40%;
   max-width: 500px;
+}
+
+.component-halfColumn {
+  border: 1px solid black;
+  width: 50%;
 }
 
 /*
@@ -336,6 +334,7 @@ select {
   width: 75%;
   margin: auto
 }
+
 .selectWrap::after {
   content: '';
   pointer-events: none;
