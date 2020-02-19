@@ -155,16 +155,17 @@ Widgets ELEMENTS -------------------
   margin-top: 2rem;
   display: flex;
   flex-direction: row;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
   max-width:1080px;
 }
 
 .bottomright {
   z-index: 0;
   position: absolute;
-  top: 250px;
-  right: 100px;
+  top: 230px;
+  right: 200px;
   font-size: 1.25rem;
+  color: #2a2a30;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.12), 0 1px 2px rgba(255, 255, 255, 0.24);
 }
 
 .sideMargin{
@@ -507,15 +508,44 @@ https://css-tricks.com/star-ratings/
 .button-back, .button-forward{
   background-color: #4c585d;
   border: none;
-  color: white;
+  color: transparent;
   padding: 0.5rem 0.75rem;
   z-index: 2;
   position: absolute;
   top: calc(350px * 0.5);
   transform: translateY(-50%);
   cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 .button-forward{
   right:0;
   margin-right: 0.75rem;
+}
+.button-forward::after{
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  right: 10px;
+  top: -1px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid white;
+  clear: both;
+  margin-top: 0.65rem;
+}
+.button-back::after{
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  left: 10px;
+  top: -1px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 7px solid white;
+  clear: both;
+  margin-top: 0.65rem;
 }
