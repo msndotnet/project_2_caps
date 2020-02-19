@@ -2,12 +2,8 @@
 Load Fonts -------------------
 */
 @font-face {
-  font-family: 'Clarendon';
-  src: url('../fonts/ClarendonCondensedBT.ttf');
-}
-@font-face {
-  font-family: 'VeneerTwo';
-  src: url('../fonts/veneer-two.otf');
+  font-family: 'Lobster';
+  src: url('../fonts/Lobster-Regular.ttf');
 }
 @font-face {
   font-family: 'RangeMono-Reg';
@@ -18,219 +14,538 @@ Load Fonts -------------------
   src: url('../fonts/range-mono-light.ttf');
 }
 
-
-
 /*
 PAGE ELEMENTS -------------------
 */
 html {
+  font-size: 14px;
   background-color: #E8EBEB;
-  font-size: 8px;
+}
+body {
+  margin:0;
+  min-height: 100%;
 }
 
-.flex-container-1, .flex-container-2, .flex-container-3,
-.flex-container-4, .flex-container-5{
+.title {
+  font-size: 3rem;
+  font-family: 'Lobster';
+  color: #D4C090;
+  text-decoration: none;
+}
+.title:hover, .title:focus {
+  font-size: 3rem;
+  font-family: 'Lobster';
+  text-decoration: none;
+  color: #b1a071;
+}
+
+p {
+  display: inline;
+  font-family: 'RangeMono-Light';
+}
+a {
+  font-family: 'RangeMono-Reg';
+  color: #b1a071;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+a:hover, a:focus {
+  font-family: 'RangeMono-Reg';
+  color: #d4c090;
+}
+.bold {
+  font-family: 'RangeMono-Reg';
+}
+h1, h2, h3 {
+  font-family: 'Lobster';
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+h1{
+  font-size: 2.5rem;
+  color: #2a2a30;
+}
+h2{
+  font-size: 2rem;
+  color: #4c585d;
+}
+h3{
+  font-size: 1.5rem;
+  color: #72848a;
+  padding: 1rem;
+}
+#productName {
+  margin-top: 1rem;
+  font-size: 3rem;
+}
+#productPrice {
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 2.5rem;
+}
+nav {
+  background-color: #2A2A30;
+  align-self: center;
+}
+hr {
+  margin: 2rem 0 1.5rem 0;
+}
+.navBar, .banner, .mainContainer, footer{
   display:flex;
+  min-height: 56px;
 }
-
-.flex-container-1 >div {
-  font-family: 'Clarendon';
-
+.navBar {
+  font-family: 'Lobster';
   background-color: #2A2A30;
   color: #B1A071;
-  padding: 1rem;
+  justify-content: space-between;
+  z-index: 5;
+  /* https://codepen.io/sdthornton/pen/wBZdXq */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  padding: 1.5rem 2rem 1rem 2rem;
 }
 
-.flex-container-2 >div {
-  background-color: white;
-
-  padding: 1rem;
+.mainContainer {
+  display:flex;
+  margin-top: 2rem;
 }
 
-.flex-container-3 >div {
-  background-color: white;
-
-  padding: 1rem;
+footer {
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+  bottom: 0;
+  background-color: #D9DEDE;
+  border: none;
+  margin-top: 3rem;
 }
-
-.flex-container-4 >div {
-  background-color: white;
-
-}
-
-.flex-container-5 >div {
-  background-color: white;
-
-  padding: 1rem;
-}
-
-.test-container{
-  flex:1;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: 1.5em;
+footer p, footer h2, footer a {
   text-align: center;
-  font-family: "gotham";
+  margin: 0 auto;
+  color: #72848a;
+  text-decoration: none;
+}
+footer h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+footer p {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 /*
 Widgets ELEMENTS -------------------
 */
-
-.space{
-  flex:  1 1 0px;
+.bodyWrapper {
+  max-width:1080px;
+  margin: 0 auto;
+}
+.description-box{
+  display: flex;
+  flex-direction: column;
+}
+.textfield-box{
+  display: flex;
+  flex-direction: column;
 }
 
-.title{
-  flex: 1 0 200px;
-  min-height: 56px;
-  font-size: 4rem;
+.bodyWrapper-row{
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  max-width:1080px;
 }
 
-.ad-space-margin{
+.bottomright {
+  z-index: 0;
+  position: absolute;
+  top: 230px;
+  right: 200px;
+  font-size: 1.25rem;
+  color: #2a2a30;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.12), 0 1px 2px rgba(255, 255, 255, 0.24);
+}
+
+.sideMargin{
   display: flex;
   flex: 1 0 0;
   position: relative;
   flex-direction: column;
-  max-width: 10%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  /* min-width: 10%; */
   background-position: top center;
-  background-color: #72848A;
 }
 
-.ad-space{
-  display: flex;
-  flex: 1 0 0;
-  position: relative;
-flex-direction: row;
-  border: 1px solid black;
-  background-position: top center;
-  background-color: #72848A;
+
+.banner{
+  z-index: -1;
+  background-size: contain;
+  display:flex;
+  max-height:412px;
 }
 
-.ad-space-2{
-  display: flex;
-  flex: 1 0 0;
-flex-direction: column;
-  border: 1px solid black;
-
-  background-position: top center;
-  background-color: #72848A;
-}
-
-.mini-ads{
-  display: flex;
-  flex: 1 0 0;
-flex-direction: column;
-  border: 1px solid black;
-  margin: 0px;
-  padding: 2rem;
-
-  background-position: top center;
-  background-color: #72848A;
-}
-
-.ad-space-discover{
-  display: flex;
-  column-fill:  100%;
-  position: relative;
+.banner img{
+  z-index: inherit;
   width: 100%;
-  border: 1px solid black;
+  height: auto;
+  /* min-width: 1200px; */
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
-.footer-block{
-  display: flex;
-  column-fill:  100%;
-  position: relative;
+.bottom-banner{
+  display:flex;
+  flex-direction: row;
+  margin-top: 3rem;
+}
+
+.banner2{
+  width: 50%;
+  flex-direction: column;
+  margin-right: 0.5rem;
+}
+
+.banner2-images, .about-images{
   width: 100%;
-  min-height: 150px;
-  border: 1px solid black;
-  padding-bottom: 4rem;
+  height: 900px;
+  background: url(../img/model-7.jpg);
+  background-size: cover;
+}
+.about-images{
+  height: auto;
+}
+
+.banner2-column{
+  flex-direction: column;
+  width: 50%;
+}
+
+.banner2-column-images{
+  width:100%;
+  height:447px;
+  margin-bottom: 0.5rem;
+}
+
+#banner2Column1{
+  background: url(../img/model-4.jpg);
+  background-size: cover;
+}
+
+#banner2Column2{
+  background: url(../img/model-8.jpg);
+  background-size: cover;
+}
+
+.noMargin {
+  margin: 0rem;
 }
 
 .product-card-box{
-  max-width: 25rem;
-  margin-bottom: auto;
+  max-width: 100%;
   text-align: center;
-  font-family: 'Public Sans', sans-serif;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  background-color: #E8EBEB;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  background-color: white;
+  /* border: 1px solid #4c585d; */
+  margin: 0;
+}
+.product-card-box:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.product-card-box h2 {
+  margin:0;
+  padding:0;
+  transform: translateY(-75%);
+}
+.product-card-box p{
+  font-size: 1.25rem;
+  margin:0;
+  padding:1rem 0 0.75rem 0;
+  text-decoration: none;
+  display: block;
+  color: #E8EBEB;
+  background-color: #4c585d;
+}
+#productImage{
+  width: calc(100% - 2rem);
+  padding: 1rem 1rem 0 1rem;
+}
+
+.halfColumn {
+  /* border: 1px solid black; */
+  width: 50%;
+  position: relative;
+  padding: 0.75rem;
+}
+
+.aboutText{
+  margin: 0 5rem;
+  position: relative;
+  top: 40%;
+  transform: translateY(-40%);
+}
+
+/*
+Buttons/Forms ELEMENTS -------------------
+*/
+
+.button-nav {
+  display: inline-block;
+  font-family: 'RangeMono-Reg';
+  color: #d4c090;
+  text-decoration: none;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  font-size: 1.25rem;
   margin-left: 2rem;
+}
+
+.button-nav:hover, .button-nav:focus {
+  color: #b1a071;
+}
+
+.button-form, .button-help {
+  display: block;
+  font-family: 'Lobster';
+  font-size: 1.5rem;
+  color: #E8EBEB;
+  background-color: #4c585d;
+  /* border-radius: 1px; */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  text-decoration: none;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;;
+}
+.button-form {
+  position: absolute;
+  padding: 0.75rem 1rem;
+  padding-top: 0.5rem;
+  margin-bottom: 1rem;
+  width: calc(100% - 3.5rem);
+  bottom: 0;
+}
+
+.button-help{
+  border-radius: 100px;
+  font-size: 1.25rem;
+  height: 2rem;
+  width: 2.5rem;
+  font-family: 'RangeMono-Reg';
+  margin-top: 0.4rem;
+  padding-top: 0.5rem;
+  line-height: 150%;
+  text-align: center;
+  display: inline-block;
+  float: right;
+}
+.button-form:hover, .button-form:focus, .button-help:hover, .button-help:focus {
+  cursor: pointer;
+  display: block;
+  font-family: 'Lobster';
+  background-color: #72848a;
+  color: #E8EBEB;
+}
+
+.button-help:hover, .button-help:focus {
+  border-radius: 100px;
+  height: 2rem;
+  width: 2.5rem;
+  margin-top: 0.4rem;
+  font-family: 'RangeMono-Reg';
+  padding-top: 0.5rem;
+  text-align: center;
+  display: inline-block;
+}
+
+input,textarea {
+  background-color: white;
+  font-family: 'RangeMono-Reg';
+  font-size: 1rem;
+  /* border: 1px solid #4c585d; */
+  border: none;
+  max-width: calc(100% - 1.5rem);
+  padding: 0.5rem 1rem;
+  padding-top: 0.75rem;
+  margin-top: 1rem;
+}
+
+select {
+  background-color: white;
+  cursor: pointer;
+  font-family: 'RangeMono-Reg';
+  width: 100%;
+  font-size: 1rem;
+  /* border: 1px solid #4c585d; */
+  border: none;
+  border-right: 32px solid #4c585d;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius: 0px;
+  /* http://jsfiddle.net/fMuPt/ */
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  padding: 0.4rem 1rem;
+  padding-top: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* https://stackoverflow.com/questions/3532649/problem-with-select-and-after-with-css-in-webkit */
+.selectWrap {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  max-width: 100%;
+  width: 100%;
+  margin: auto
+}
+.selectWrap::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  right: 9px;
+  top: 12px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid white;
+  clear: both;
+  margin-top: 0.5rem;
+}
+
+/*
+Ratings Stars
+(with as little code as possible)
+https://css-tricks.com/star-ratings/
+*/
+.rating {
+  cursor: pointer;
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: left;
+  font-size: 1.75rem;
+  float:right;
+  margin-top: 1rem;
   margin-right: 2rem;
-
 }
-
-/*
-Headings ELEMENTS -------------------
-*/
-
-.headings1-product{
-  font-size: 4rem;
-  font-family: 'Quantico', sans-serif;
-  font-weight: bold;
-  text-align:center;
-  text-decoration: none;
-  margin-left: 0;
-  padding: 0;
+.rating > span {
   display: inline-block;
-  line-height: 1em;
-  height: 1.5em;
-
+  position: relative;
+  color: #4c585d;
+  width: 1.1em;
+}
+.rating > span:hover,
+.rating > span:hover ~ span {
+  color: transparent;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+  content: "\2605";
+  position: absolute;
+  left: 0;
+  color: #D4C090;
 }
 
-.headings2-product{
-  font-size: 3rem;
-  font-family: 'Public Sans', sans-serif;
-  font-weight: normal;
-  text-align: center;
-  text-decoration: none;
-  margin:  0;
-  padding: 0;
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal */
+/* The Modal (background) */
+.modal, .modal2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.paragraph-product{
-  font-family: 'Public Sans', sans-serif;
-  font-size: 2rem;
+/* Modal Content */
+.modal-content, .modal-content2 {
+  z-index: 10;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 810px;
+}
+
+/* The Close Button */
+.close, .close2 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
   font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
-  padding: 1rem;
-  display: inline-block;
-
 }
 
-/*
-Buttons ELEMENTS -------------------
-*/
-
-.button-product{
-  display: inline-block;
-  background-color:  #522B47;
-
-  text-align: center;
-  font-size: 4rem;
+.close:hover,
+.close:focus,.close2:hover,
+.close2:focus {
+  color: #000;
   text-decoration: none;
-  font-weight: bold;
-  color: white;
   cursor: pointer;
 }
 
-.button-product:hover, .button-product:focus {
-  opacity: 0.7;
+
+/* flickity slidesho/carousel */
+/* https://www.w3schools.com/w3css/w3css_slideshow.asp */
+.slideshow-container{
+  object-fit: cover;
+  width: 100%;
+  max-height: 350px;
+  overflow: hidden;
+  background-color: white;
 }
-
-.navigation-buttons{
-  font-size: 2rem;
-  font-family: 'Clarendon';
-  border: 3px solid #8AC007;
-  display: flex;
-position: relative;
-top:50%;
-
+.slideshow-container img{
+  max-height: 350px;
+  object-fit: contain;
+  object-position: 50% 50%;
 }
-
-.navigation-buttons span {
-  align-self: flex-end;
+.mySlides {display:none;}
+.button-back, .button-forward{
+  background-color: #4c585d;
+  border: none;
+  color: transparent;
+  padding: 0.5rem 0.75rem;
+  z-index: 2;
+  position: absolute;
+  top: calc(350px * 0.5);
+  transform: translateY(-50%);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.button-forward{
+  right:0;
+  margin-right: 0.75rem;
+}
+.button-forward::after{
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  right: 10px;
+  top: -1px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid white;
+  clear: both;
+  margin-top: 0.65rem;
+}
+.button-back::after{
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  left: 10px;
+  top: -1px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 7px solid white;
+  clear: both;
+  margin-top: 0.65rem;
 }
