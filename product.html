@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/flickity.css">
 </head>
 
 <!-- This is a navigation bar -->
@@ -33,21 +34,41 @@
     <div class ="mainContainer">
       <!-- Left Content Panel-->
         <div class = "halfColumn">
-          <h1 id="productName">Essential Gray London</h1>
+          <h1 id="productName">8 Piece Baker Boy</h1>
         <div class ="textfield-box">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Nunc finibus sodales nisl et tincidunt. Interdum et malesuada
-            fames ac ante ipsum primis in faucibus. Vestibulum at tempor
-            quam, et suscipit nibh. Fusce condimentum metus a odio imperdiet,
-            vel dictum diam lobortis. Aliquam volutpat vel libero ut commodo.
-            Vivamus molestie est at lectus faucibus, sed gravida ex semper.
-            Maecenas fringilla lectus tellus, at vehicula justo posuere quis.</p>
+          <p>The 8 piece cap has truly stood the test of time, 
+            becoming notorious with being worn by the 'newsboys' 
+            during the 1900s. Popularized by such varied icons of 
+            style as David Beckham, Jay Gatsby, Brian Johnson, and 
+            the Duke of Windsor this hat leapt into the public 
+            consciousness most recently for heavily featuring in the hit television series Peaky Blinders.
+          </p>
+          <p>
+            Approx.<br>
+            9 1/4" Length, Flat<br>
+            10 1/2" Width, Flat<br>
+            2 1/4" Double Snap Bill/Brim, Pre-Curved
+          </p>
+          <p>
+            Made of:<br>
+            100% Pure Wool
+          </p>
           </div>
 
-          <h2 id="productPrice">£ 45.00</h2>
+          <h2 id="productPrice">£ 49.00</h2>
             <!-- https://css-tricks.com/star-ratings/ -->
-            <div class="rating">
+            <div id="myBtn" class="rating">
               <span>☆</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <!-- RATING POPUP -->
+            <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal -->
+            <div id="myModal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Reviews</h2>
+                <p>Review inputs and whatnot</p>
+              </div>
             </div>
         </div>
         
@@ -55,7 +76,14 @@
         <div class = "halfColumn" style="padding-bottom: 5rem;">
           <!-- Product Photo-->
           <div class = "banner">
-            <img src="img/tommy.jpg" alt="Placeholder">
+            <!-- <img src="img/tommy.jpg" alt="Placeholder" id="fullOpacity">/ -->
+            <!-- https://www.w3schools.com/w3css/w3css_slideshow.asp-->
+            <div class="slideshow-container">
+              <button class="button-back" onclick="plusDivs(-1)">&#10094;</button>
+              <button class="button-forward" onclick="plusDivs(1)">&#10095;</button>
+              <img class="mySlides" src="img/tommyHat.jpg" style="width:100%">
+              <img class="mySlides" src="img/tommy.jpg" style="width:100%">
+            </div>
           </div>
             <br>
             <!-- Selection Box-->
@@ -67,12 +95,26 @@
                   <option value="s">Small</option>
                   <option value="m">Medium</option>
                   <option value="l">Large</option>
+                  <option value="l">Extra-Large</option>
                 </select>
               </div>
             
             <!-- Help Button-->
-            <div class="button-help">?</div>
+            <div class="button-help" id="myBtn2">?</div>
             <br>
+            <!-- SIZE/HELP POPUP -->
+            <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal -->
+            <div id="myModal2" class="modal2">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close2">&times;</span>
+                <h2>Measurements</h2>
+                <p>Chart for head size measurements</p>
+                
+                <img src="img/tommy.jpg" alt="Placeholder">
+              </div>
+            </div>
+
             <!-- Purchase Button-->
             <div class ="textfield-box">
               <a href="#" class="button-form">Purchase</a>
@@ -94,30 +136,41 @@
       </div>
       <div class ="mainContainer noMargin">
         <!-- Product Boxes-->
-        <div class="product-card-box">
-          <img src="img/small/mens-vintage-traditional-tweed.jpg"
-          alt="cap" style="width: 100%;">
-          <h2>Premium Men's Flatcap</h2>
-          <h3>C$35</h3>
-        </div>
-        <div class="product-card-box">
-          <img src="img/small/mens-vintage-traditional-tweed.jpg"
-          alt="cap" style="width: 100%;">
-          <h2>Premium Men's Flatcap</h2>
-          <h3>C$35</h3>
-        </div>
-        <div class = "product-card-box">
-          <img src="img/small/mens-vintage-traditional-tweed.jpg"
-          alt="cap" style="width: 100%;">
-          <h2>Premium Men's Flatcap</h2>
-          <h3>C$35</h3>
-        </div>
-        <div class = "product-card-box">
-          <img src="img/small/mens-vintage-traditional-tweed.jpg"
-          alt="cap" style="width: 100%;">
-          <h2>Premium Men's Flatcap</h2>
-          <h3>C$35</h3>
-        </div>
+        <a href="product.html" style="text-decoration: none; margin: 0.75rem;">
+          <div class="product-card-box">
+            <img id="productImage" src="img/mens-caps-1.jpg"
+            alt="cap">
+            <h2>Fable</h2>
+            <p class="bold">£45.00</p>
+          </div>
+        </a>
+
+        <a href="product.html" style="text-decoration: none;margin: 0.75rem;">
+          <div class="product-card-box">
+            <img id="productImage" src="img/mens-caps-1.jpg"
+            alt="cap">
+            <h2>Leagend</h2>
+            <p class="bold">£45.00</p>
+          </div>
+        </a>
+
+        <a href="product.html" style="text-decoration: none;margin: 0.75rem;">
+          <div class = "product-card-box">
+            <img id="productImage" src="img/mens-caps-1.jpg"
+            alt="cap">
+            <h2>Lagoon</h2>
+            <p class="bold">£45.00</p>
+          </div>
+        </a>
+
+        <a href="product.html" style="text-decoration: none;margin: 0.75rem;">
+          <div class = "product-card-box">
+            <img id="productImage" src="img/mens-caps-1.jpg"
+            alt="cap">
+            <h2>Ardor</h2>
+            <p class="bold">£45.00</p>
+          </div>
+        </a>
       </div>
 
     </div>
@@ -126,5 +179,77 @@
       <h2>Birminham Brims</h2>
       <p><a href="styleguide.html">Styleguide</a> | <a href="citations.html">Citations</a></p>
     </footer>
+
+
+    <!-- POPUP SCRIPT -->
+    <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal -->
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      // When the user clicks the button, open the modal 
+      btn.onclick = function() {
+        modal.style.display = "block";
+        buttonBack.style.display = "none";
+        buttonFor.style.display = "none";
+      }
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+        buttonBack.style.display = "block";
+        buttonFor.style.display = "block";
+      }
+
+      // Second one
+      var modal2 = document.getElementById("myModal2");
+      var btn2 = document.getElementById("myBtn2");
+      var span2 = document.getElementsByClassName("close2")[0];
+      var buttonBack = document.getElementsByClassName("button-back")[0];
+      var buttonFor = document.getElementsByClassName("button-forward")[0];
+      btn2.onclick = function() {
+        modal2.style.display = "block";
+        buttonBack.style.display = "none";
+        buttonFor.style.display = "none";
+      }
+      span2.onclick = function() {
+        modal2.style.display = "none";
+        buttonBack.style.display = "block";
+        buttonFor.style.display = "block";
+      }
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal2) {
+          modal2.style.display = "none";
+          buttonBack.style.display = "block";
+          buttonFor.style.display = "block";
+        } else if (event.target == modal) {
+          modal.style.display = "none";
+          buttonBack.style.display = "block";
+          buttonFor.style.display = "block";
+        }
+      }
+    </script>
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+      }
+      </script>
   </body>
   </html>

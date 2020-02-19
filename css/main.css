@@ -185,10 +185,6 @@ Widgets ELEMENTS -------------------
   max-height:412px;
 }
 
-#bannerLastrow{
-  opacity: 1;
-}
-
 .banner img{
   z-index: inherit;
   width: 100%;
@@ -196,7 +192,6 @@ Widgets ELEMENTS -------------------
   /* min-width: 1200px; */
   object-fit: cover;
   margin-bottom: 1rem;
-  opacity: 0.75;
 }
 
 .bottom-banner{
@@ -252,15 +247,29 @@ Widgets ELEMENTS -------------------
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   background-color: white;
-  margin: 0.75rem;
-  padding: 1.5rem 1rem 1rem 1rem;
+  /* border: 1px solid #4c585d; */
+  margin: 0;
 }
-.product-card-box:hover{
+.product-card-box:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-
+.product-card-box h2 {
+  margin:0;
+  padding:0;
+  transform: translateY(-75%);
+}
+.product-card-box p{
+  font-size: 1.25rem;
+  margin:0;
+  padding:1rem 0 0.75rem 0;
+  text-decoration: none;
+  display: block;
+  color: #E8EBEB;
+  background-color: #4c585d;
+}
 #productImage{
-  width: 100%
+  width: calc(100% - 2rem);
+  padding: 1rem 1rem 0 1rem;
 }
 
 .halfColumn {
@@ -299,7 +308,7 @@ Buttons/Forms ELEMENTS -------------------
 .button-form, .button-help {
   display: block;
   font-family: 'Lobster';
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #E8EBEB;
   background-color: #4c585d;
   /* border-radius: 1px; */
@@ -319,15 +328,19 @@ Buttons/Forms ELEMENTS -------------------
 
 .button-help{
   border-radius: 100px;
+  font-size: 1.25rem;
   height: 2rem;
   width: 2.5rem;
+  font-family: 'RangeMono-Reg';
   margin-top: 0.4rem;
   padding-top: 0.5rem;
+  line-height: 150%;
   text-align: center;
   display: inline-block;
   float: right;
 }
 .button-form:hover, .button-form:focus, .button-help:hover, .button-help:focus {
+  cursor: pointer;
   display: block;
   font-family: 'Lobster';
   background-color: #72848a;
@@ -339,6 +352,7 @@ Buttons/Forms ELEMENTS -------------------
   height: 2rem;
   width: 2.5rem;
   margin-top: 0.4rem;
+  font-family: 'RangeMono-Reg';
   padding-top: 0.5rem;
   text-align: center;
   display: inline-block;
@@ -348,7 +362,8 @@ input,textarea {
   background-color: white;
   font-family: 'RangeMono-Reg';
   font-size: 1rem;
-  border: 1px solid #4c585d;
+  /* border: 1px solid #4c585d; */
+  border: none;
   max-width: calc(100% - 1.5rem);
   padding: 0.5rem 1rem;
   padding-top: 0.75rem;
@@ -357,10 +372,12 @@ input,textarea {
 
 select {
   background-color: white;
+  cursor: pointer;
   font-family: 'RangeMono-Reg';
   width: 100%;
   font-size: 1rem;
-  border: 1px solid #4c585d;
+  /* border: 1px solid #4c585d; */
+  border: none;
   border-right: 32px solid #4c585d;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   border-radius: 0px;
@@ -368,13 +385,14 @@ select {
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
   padding: 0.4rem 1rem;
-  padding-top: 0.6rem;
+  padding-top: 0.75rem;
   margin-top: 0.5rem;
 }
 
 /* https://stackoverflow.com/questions/3532649/problem-with-select-and-after-with-css-in-webkit */
 .selectWrap {
   position: relative;
+  cursor: pointer;
   display: inline-block;
   max-width: 100%;
   width: 100%;
@@ -401,6 +419,7 @@ Ratings Stars
 https://css-tricks.com/star-ratings/
 */
 .rating {
+  cursor: pointer;
   unicode-bidi: bidi-override;
   direction: rtl;
   text-align: left;
@@ -425,4 +444,78 @@ https://css-tricks.com/star-ratings/
   position: absolute;
   left: 0;
   color: #D4C090;
+}
+
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal */
+/* The Modal (background) */
+.modal, .modal2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content, .modal-content2 {
+  z-index: 10;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 810px;
+}
+
+/* The Close Button */
+.close, .close2 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus,.close2:hover,
+.close2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* flickity slidesho/carousel */
+/* https://www.w3schools.com/w3css/w3css_slideshow.asp */
+.slideshow-container{
+  object-fit: cover;
+  width: 100%;
+  max-height: 350px;
+  overflow: hidden;
+  background-color: white;
+}
+.slideshow-container img{
+  max-height: 350px;
+  object-fit: contain;
+  object-position: 50% 50%;
+}
+.mySlides {display:none;}
+.button-back, .button-forward{
+  background-color: #4c585d;
+  border: none;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  z-index: 2;
+  position: absolute;
+  top: calc(350px * 0.5);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.button-forward{
+  right:0;
+  margin-right: 0.75rem;
 }
