@@ -61,14 +61,12 @@ p {
 h1, h2, h3 {
   font-family: 'VeneerTwo';
   margin-bottom:-1rem;
-  padding-left: 1rem;
 }
 
 h1{
   font-size: 2.5rem;
   color: #2a2a30;
   margin-bottom:-1rem;
-  padding-left: 1rem;
 }
 
 h2{
@@ -79,6 +77,7 @@ h2{
 h3{
   font-size: 1.5rem;
   color: #72848a;
+  padding: 1rem;
 }
 
 nav {
@@ -145,6 +144,14 @@ Widgets ELEMENTS -------------------
   margin-bottom: 4rem;
 }
 
+.bottomright {
+  z-index: 0;
+  position: absolute;
+  top: 250px;
+  right: 0px;
+  font-size: 18px;
+}
+
 .sideMargin{
   display: flex;
   flex: 1 0 0;
@@ -157,9 +164,15 @@ Widgets ELEMENTS -------------------
 }
 
 .banner{
+  z-index: -1;
   background-size: contain;
   display:flex;
   max-height:412px;
+  opacity: 0.7;
+}
+
+#bannerLastrow{
+  opacity: 1;
 }
 
 .banner img{
@@ -171,44 +184,58 @@ Widgets ELEMENTS -------------------
 
 .bottom-banner{
   display:flex;
-  max-height:412px;
   flex-direction: row;
+
 }
 
 .banner2{
-  background-color: white;
   width: 50%;
   flex-direction: column;
+  margin-right: 0.5rem;
 }
 
 .banner2-images{
   width: 100%;
-  height:412px;
-  object-fit: cover;
+  height: 900px;
+  background: url(../img/model-7.jpg);
+  background-size: cover;
 }
 
 .banner2-column{
-  max-height:412px;
   flex-direction: column;
   width: 50%;
 }
 
 .banner2-column-images{
   width:100%;
-  height:50%;
-  object-fit: cover;
+  height:447px;
+  margin-bottom: 0.5rem;
+}
+
+#banner2Column1{
+  background: url(../img/model-4.jpg);
+  background-size: cover;
+}
+
+#banner2Column2{
+  background: url(../img/model-8.jpg);
+  background-size: cover;
 }
 
 .product-card-box{
   max-width: 20%;
-  padding: 2rem;
+  padding: 0.5rem;
   text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: white;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+
+  background-color: rgb(242,242,242);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+#productImage{
+  width: 100%
 }
 
 .fullColumn, .halfColumn {
@@ -241,6 +268,7 @@ Buttons/Forms ELEMENTS -------------------
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
+
 .button-nav:hover, .button-nav:focus {
   color: #b1a071;
 }
@@ -274,6 +302,7 @@ Buttons/Forms ELEMENTS -------------------
   text-decoration: none;
   margin-left: 1rem;
 }
+
 .button-help{
   border-radius: 100px;
   height: 1rem;
@@ -281,6 +310,7 @@ Buttons/Forms ELEMENTS -------------------
   text-align: center;
   display: inline-block;
 }
+
 .button-help:hover, .button-help:focus {
   border-radius: 100px;
   height: 1rem;
@@ -289,13 +319,13 @@ Buttons/Forms ELEMENTS -------------------
   display: inline-block;
 }
 
-
 a {
   font-family: 'RangeMono-Reg';
   color: #b1a071;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
+
 a:hover, a:focus {
   font-family: 'RangeMono-Reg';
   color: #d4c090;
@@ -311,7 +341,6 @@ input {
   width: calc(100% - 1.5rem);
 }
 
-
 select {
   background-color: white;
   font-family: 'RangeMono-Reg';
@@ -326,6 +355,8 @@ select {
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
 }
+
+
 /* https://stackoverflow.com/questions/3532649/problem-with-select-and-after-with-css-in-webkit */
 .selectWrap {
   position: relative;
