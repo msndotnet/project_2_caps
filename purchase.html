@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/flickity.css">
+</head>
+
+<!-- This is a navigation bar -->
+<body>
+  <div class="navBar">
+    <a class="title" href="index.html">Birmingham Brims</a>
+    <nav>
+      <a class="button-nav" href="shop.html">Shop</a>
+      <a class="button-nav" href="about.html">About</a>
+      <a class="button-nav" href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <!-- This is Body Container -->
+  <div class = "bodyWrapper">
+
+    <div class ="mainContainer">
+
+      <div class = "halfColumn">
+        <h1>Purchase Item</h1>
+      </div>
+    </div>
+
+    <div class ="mainContainer noMargin">
+      <!-- Left Content Panel-->
+      <div class = "halfColumn">
+        <h2>Delivery</h2>
+        <div class="textfield-box">
+          <input type="text" name="Textfield" placeholder="Name">
+          <input type="text" name="Textfield" placeholder="Email">
+          <div class="selectWrap" style="margin-top: 0.5rem;">
+            <select>
+              <option selected disabled>Country</option>
+              <option value="s">Canada</option>
+              <option value="m">United Kingdom</option>
+              <option value="m">United States</option>
+              <option value="l">Other</option>
+            </select>
+          </div>
+          <div class="selectWrap" style="margin-top: 0.5rem;">
+            <select>
+              <option selected disabled>Province/State</option>
+              <!-- https://www.freeformatter.com/canada-province-list-html-select.html -->
+              <option value="AB">Alberta</option>
+              <option value="BC">British Columbia</option>
+              <option value="MB">Manitoba</option>
+              <option value="NB">New Brunswick</option>
+              <option value="NL">Newfoundland and Labrador</option>
+              <option value="NS">Nova Scotia</option>
+              <option value="ON">Ontario</option>
+              <option value="PE">Prince Edward Island</option>
+              <option value="QC">Quebec</option>
+              <option value="SK">Saskatchewan</option>
+              <option value="NT">Northwest Territories</option>
+              <option value="NU">Nunavut</option>
+              <option value="YT">Yukon</option>
+            </select>
+          </div>
+          <input type="text" name="Textfield" placeholder="City">
+          <input type="text" name="Textfield" placeholder="Address">
+          <input type="text" name="Textfield" placeholder="Postal Code">
+          <input type="text" name="Textfield" placeholder="Phone (Optional)"><br><br><br>
+        </div>
+        <h2>Payment</h2>
+        <div class="textfield-box">
+          <div class="selectWrap">
+            <select>
+              <option selected disabled>Type</option>
+              <option value="s">Credit</option>
+              <option value="m">Paypal</option>
+            </select>
+          </div>
+          <input type="text" name="Textfield" placeholder="Name on Card">
+          <input type="text" name="Textfield" placeholder="Card Number">
+          <input type="text" name="Textfield" placeholder="Expiry">
+          <input type="text" name="Textfield" placeholder="CVV">
+        </div>
+  
+        
+      </div>
+        
+        <!-- Right Content Panel-->
+        <div class = "halfColumn" style="padding-bottom: 5rem;">
+
+            <!-- Selection Box-->
+            <h2>Details</h2><br>
+
+            <p>8 Piece Baker Boy<br><br>
+              <span class="bold">Size:</span> Small<br><br>
+              <span class="bold">Price:</span> £49.00 Each<br><br></p>
+              <span class="bold">Quantity: </span>
+              <div class="selectWrap" style="width: 82%;">
+                <select>
+                  <option selected disabled>1</option>
+                  <option value="m">2</option>
+                  <option value="l">3</option>
+                  <option value="l">4</option>
+                  <option value="l">5</option>
+                  <option value="l">5+</option>
+                </select>
+              </div>
+
+            <br>
+            <!-- SIZE/HELP POPUP -->
+            <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal -->
+            <div id="myModal2" class="modal2">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close2">&times;</span>
+                <h2>Measurements</h2>
+                <p>Chart for head size measurements</p>
+                
+                <img src="img/tommy.jpg" alt="Placeholder">
+              </div>
+            </div>
+
+            <!-- Purchase Button-->
+            <div class ="textfield-box">
+              <a href="#" class="button-form">Confirm</a>
+            </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <footer>
+      <h2>Birminham Brims</h2>
+      <p><a href="styleguide.html">Styleguide</a> | <a href="citations.html">Citations</a></p>
+    </footer>
+
+
+    <!-- POPUP SCRIPT -->
+    <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal -->
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      // When the user clicks the button, open the modal 
+      btn.onclick = function() {
+        modal.style.display = "block";
+        buttonBack.style.display = "none";
+        buttonFor.style.display = "none";
+      }
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+        buttonBack.style.display = "block";
+        buttonFor.style.display = "block";
+      }
+
+      // Second one
+      var modal2 = document.getElementById("myModal2");
+      var btn2 = document.getElementById("myBtn2");
+      var span2 = document.getElementsByClassName("close2")[0];
+      var buttonBack = document.getElementsByClassName("button-back")[0];
+      var buttonFor = document.getElementsByClassName("button-forward")[0];
+      btn2.onclick = function() {
+        modal2.style.display = "block";
+        buttonBack.style.display = "none";
+        buttonFor.style.display = "none";
+      }
+      span2.onclick = function() {
+        modal2.style.display = "none";
+        buttonBack.style.display = "block";
+        buttonFor.style.display = "block";
+      }
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal2) {
+          modal2.style.display = "none";
+          buttonBack.style.display = "block";
+          buttonFor.style.display = "block";
+        } else if (event.target == modal) {
+          modal.style.display = "none";
+          buttonBack.style.display = "block";
+          buttonFor.style.display = "block";
+        }
+      }
+    </script>
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+      }
+      </script>
+  </body>
+  </html>
