@@ -13,7 +13,7 @@
     <nav>
       <a class="button-nav" href="shop.html">Shop</a>
       <a class="button-nav" href="about.html">About</a>
-      <a class="button-nav" href="help.html">Help</a>
+      <a class="button-nav" href="contact.html">Contact</a>
     </nav>
   </div>
 
@@ -21,11 +21,19 @@
   <div class = "bodyWrapper">
 
     <!-- This is Product Container -->
-    <div class ="mainContainer">
+    <!-- <div class ="mainContainer", id="noMargin">
+      <div class = "halfColumn">
+        <p>Home > Shop > Product</9>
+      </div>
+      <div class = "halfColumn">
+      </div>
+    </div>
+    <hr> -->
 
+    <div class ="mainContainer">
       <!-- Left Content Panel-->
-      <div class ="halfColumn">
-        <h1>Essential Gray London</h1>
+        <div class = "halfColumn">
+          <h1 id="productName">Essential Gray London</h1>
         <div class ="textfield-box">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Nunc finibus sodales nisl et tincidunt. Interdum et malesuada
@@ -36,53 +44,55 @@
             Maecenas fringilla lectus tellus, at vehicula justo posuere quis.</p>
           </div>
 
-          <h2>C$35</h2>
-
-          <div class = "textfield-box">
+          <h2 id="productPrice">£ 45.00</h2>
             <!-- https://css-tricks.com/star-ratings/ -->
             <div class="rating">
-              <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+              <span>☆</span><span>★</span><span>★</span><span>★</span><span>★</span>
             </div>
-          </div>
         </div>
-
+        
         <!-- Right Content Panel-->
-        <div class ="halfColumn">
+        <div class = "halfColumn" style="padding-bottom: 5rem;">
           <!-- Product Photo-->
           <div class = "banner">
-          <img src="img/tommy.jpg" alt="Placeholder">
-        </div>
-          <br>
-          <!-- Selection Box-->
-          <p>
-            <span class="bold">Size: </span>
-            <div class="selectWrap">
-              <select>
-                <option selected disabled>Choose Size</option>
-                <option value="s">Small</option>
-                <option value="m">Medium</option>
-                <option value="l">Large</option>
-              </select>
-            </div>
-          </p>
-
-          <!-- Help Button-->
-          <div class="button-help">?</div>
-
-          <!-- pURCHASE Button-->
-          <div class ="textfield-box">
-            <a href="#" class="button-form">Purchase</a>
+            <img src="img/tommy.jpg" alt="Placeholder">
           </div>
+            <br>
+            <!-- Selection Box-->
+            <p>
+              <span class="bold">Size: </span>
+              <div class="selectWrap" style="width: 80%;">
+                <select>
+                  <option selected disabled>Choose Size</option>
+                  <option value="s">Small</option>
+                  <option value="m">Medium</option>
+                  <option value="l">Large</option>
+                </select>
+              </div>
+            
+            <!-- Help Button-->
+            <div class="button-help">?</div>
+            <br>
+            <!-- Purchase Button-->
+            <div class ="textfield-box">
+              <a href="#" class="button-form">Purchase</a>
+            </div>
         </div>
-
 
       </div>
       <hr>
-
-      <div class ="mainContainer">
-
-
-        <h2>More Products</h2><br>
+      <div class ="mainContainer noMargin">
+        <div class = "halfColumn">
+          <h2>More Products</h2>
+        </div>
+        <div class = "halfColumn">
+        </div>
+        <div class = "halfColumn">
+        </div>
+        <div class = "halfColumn">
+        </div>
+      </div>
+      <div class ="mainContainer noMargin">
         <!-- Product Boxes-->
         <div class="product-card-box">
           <img src="img/small/mens-vintage-traditional-tweed.jpg"
@@ -108,13 +118,13 @@
           <h2>Premium Men's Flatcap</h2>
           <h3>C$35</h3>
         </div>
-
-
       </div>
 
-      <footer>
-        <p>Footer</p>
-      </footer>
     </div>
+
+    <footer>
+      <h2>Birminham Brims</h2>
+      <p><a href="styleguide.html">Styleguide</a> | <a href="citations.html">Citations</a></p>
+    </footer>
   </body>
   </html>
