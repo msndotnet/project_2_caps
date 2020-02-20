@@ -24,66 +24,22 @@
     <div class ="mainContainer">
 
       <div class = "halfColumn">
-        <h1>Purchase Item</h1>
+        <h1>Purchase Confirmed</h1>
       </div>
     </div>
 
     <div class ="mainContainer noMargin">
       <!-- Left Content Panel-->
       <div class = "halfColumn">
-        <h2>Delivery</h2>
-        <div class="textfield-box">
-          <input type="text" name="Textfield" placeholder="Name">
-          <input type="text" name="Textfield" placeholder="Email">
-          <input type="text" name="Textfield" placeholder="Address">
-          <input type="text" name="Textfield" placeholder="City">
-          <div class="selectWrap" style="margin-top: 0.5rem;">
-            <select>
-              <option selected disabled>Country</option>
-              <option value="s">Canada</option>
-              <option value="m">United Kingdom</option>
-              <option value="m">United States</option>
-              <option value="l">Other</option>
-            </select>
-          </div>
-          <div class="selectWrap" style="margin-top: 0.5rem;">
-            <select>
-              <option selected disabled>Province/State</option>
-              <!-- https://www.freeformatter.com/canada-province-list-html-select.html -->
-              <option value="AB">Alberta</option>
-              <option value="BC">British Columbia</option>
-              <option value="MB">Manitoba</option>
-              <option value="NB">New Brunswick</option>
-              <option value="NL">Newfoundland and Labrador</option>
-              <option value="NS">Nova Scotia</option>
-              <option value="ON">Ontario</option>
-              <option value="PE">Prince Edward Island</option>
-              <option value="QC">Quebec</option>
-              <option value="SK">Saskatchewan</option>
-              <option value="NT">Northwest Territories</option>
-              <option value="NU">Nunavut</option>
-              <option value="YT">Yukon</option>
-            </select>
-          </div>
-          <input type="text" name="Textfield" placeholder="Postal Code">
-          <input type="text" name="Textfield" placeholder="Phone (Optional)"><br><br><br>
+        <h2>Shipping to:</h2><br>
+        <p>Tommy Shelby<br><br>
+          Tipton Rd, Dudley <br>
+          DY1 4SQ, United Kingdom<br><br></p>
+        <p class="bold" style="position: absolute; bottom: 0; margin-bottom: 5rem;">Check your email (tshelby@gmail.com) for confirmation.</p>
+        <!-- Purchase Button-->
+        <div class ="textfield-box">
+          <a href="contact.html" class="button-form">I didn't recieve confirmation</a>
         </div>
-        <h2>Payment</h2>
-        <div class="textfield-box">
-          <div class="selectWrap">
-            <select>
-              <option selected disabled>Type</option>
-              <option value="s">Credit</option>
-              <option value="m">Paypal</option>
-            </select>
-          </div>
-          <input type="text" name="Textfield" placeholder="Name on Card">
-          <input type="text" name="Textfield" placeholder="Card Number">
-          <input type="text" name="Textfield" placeholder="Expiry">
-          <input type="text" name="Textfield" placeholder="CVV">
-        </div>
-  
-        
       </div>
         
         <!-- Right Content Panel-->
@@ -92,20 +48,11 @@
             <!-- Selection Box-->
             <h2>Order Details</h2><br>
 
-            <p>8 Piece Baker Boy<br><br>
+            <p><span class="bold">Order Number:</span> 524678<br><br>
+              8 Piece Baker Boy<br><br>
               <span class="bold">Size:</span> Small<br><br>
               <span class="bold">Price:</span> £49.00 Each<br><br></p>
-              <span class="bold">Quantity: </span>
-              <div class="selectWrap" style="width: 82%;">
-                <select>
-                  <option selected disabled>1</option>
-                  <option value="m">2</option>
-                  <option value="l">3</option>
-                  <option value="l">4</option>
-                  <option value="l">5</option>
-                  <option value="l">5+</option>
-                </select>
-              </div>
+              <span class="bold">Quantity:</span> 1<br><br></p>
 
             <br>
             <!-- SIZE/HELP POPUP -->
@@ -123,11 +70,62 @@
 
             <!-- Purchase Button-->
             <div class ="textfield-box">
-              <a href="confirm.html" class="button-form">Confirm</a>
+              <!-- <a href="#" class="button-form">Confirm</a> -->
             </div>
         </div>
 
       </div>
+      
+      <hr>
+      <div class ="mainContainer noMargin">
+        <div class = "halfColumn">
+          <h2>More Products</h2>
+        </div>
+        <div class = "halfColumn">
+        </div>
+        <div class = "halfColumn">
+        </div>
+        <div class = "halfColumn">
+        </div>
+      </div>
+    <div class ="mainContainer noMargin">
+      <!-- Product Boxes-->
+      <a href="product.html" style="text-decoration: none; margin: 0.75rem;">
+        <div class="product-card-box">
+          <img id="productImage" src="img/mens-caps-1.jpg"
+          alt="cap">
+          <h2>Fable</h2>
+          <p class="bold">£45.00</p>
+        </div>
+      </a>
+
+      <a href="product.html" style="text-decoration: none;margin: 0.75rem;">
+        <div class="product-card-box">
+          <img id="productImage" src="img/mens-caps-1.jpg"
+          alt="cap">
+          <h2>Leagend</h2>
+          <p class="bold">£45.00</p>
+        </div>
+      </a>
+
+      <a href="product.html" style="text-decoration: none;margin: 0.75rem;">
+        <div class = "product-card-box">
+          <img id="productImage" src="img/mens-caps-1.jpg"
+          alt="cap">
+          <h2>Lagoon</h2>
+          <p class="bold">£45.00</p>
+        </div>
+      </a>
+
+      <a href="product.html" style="text-decoration: none;margin: 0.75rem;">
+        <div class = "product-card-box">
+          <img id="productImage" src="img/mens-caps-1.jpg"
+          alt="cap">
+          <h2>Ardor</h2>
+          <p class="bold">£45.00</p>
+        </div>
+      </a>
+    </div>
 
     </div>
 
