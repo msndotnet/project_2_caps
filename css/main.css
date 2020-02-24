@@ -110,6 +110,17 @@ hr {
   margin-top: 2rem;
 }
 
+code {
+  background-color: #d9dede;
+  font-family: 'RangeMono-Light';
+  padding: 0.5rem 0.75rem;
+  position: relative;
+  /* https://krasimirtsonev.com/blog/article/CSS-The-background-color-and-overlapping-rows-inline-element */
+  display: block;
+  /* https://www.w3schools.com/cssref/pr_text_white-space.asp */
+  white-space: pre-line;
+}
+
 footer {
   width: 100%;
   flex-direction: column;
