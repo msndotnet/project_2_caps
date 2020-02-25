@@ -296,6 +296,11 @@ Widgets ELEMENTS -------------------
   margin-bottom: 0.5rem;
 }
 
+#banner2row1 {
+  background: url(../img/model-10.jpg);
+  background-size: cover;
+}
+
 #banner2Column1 {
   background: url(../img/model-4.jpg);
   background-size: cover;
