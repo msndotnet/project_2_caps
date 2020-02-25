@@ -5,13 +5,20 @@ Load Fonts -------------------
   font-family: 'Lobster';
   src: url('../fonts/Lobster-Regular.ttf');
 }
+
 @font-face {
   font-family: 'RangeMono-Reg';
   src: url('../fonts/range-mono.ttf');
 }
+
 @font-face {
   font-family: 'RangeMono-Light';
   src: url('../fonts/range-mono-light.ttf');
+}
+
+@font-face {
+  font-family: 'VeneerTwo-Reg';
+  src: url('../fonts/veneer-two.otf');
 }
 
 /*
@@ -21,8 +28,9 @@ html {
   font-size: 14px;
   background-color: #E8EBEB;
 }
+
 body {
-  margin:0;
+  margin: 0;
   min-height: 100%;
 }
 
@@ -32,6 +40,7 @@ body {
   color: #D4C090;
   text-decoration: none;
 }
+
 .title:hover, .title:focus {
   font-size: 3rem;
   font-family: 'Lobster';
@@ -43,57 +52,93 @@ p {
   display: inline;
   font-family: 'RangeMono-Light';
 }
+
 a {
   font-family: 'RangeMono-Reg';
   color: #b1a071;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
+
 a:hover, a:focus {
   font-family: 'RangeMono-Reg';
   color: #d4c090;
 }
+
 .bold {
   font-family: 'RangeMono-Reg';
 }
+
 h1, h2, h3 {
   font-family: 'Lobster';
   margin-top: 0;
   margin-bottom: 1rem;
 }
-h1{
+
+h1 {
   font-size: 2.5rem;
   color: #2a2a30;
 }
-h2{
+
+h2 {
   font-size: 2rem;
   color: #4c585d;
 }
-h3{
+
+h3 {
   font-size: 1.5rem;
   color: #72848a;
   padding: 1rem;
 }
+
+#posterText {
+  font-size: 2.5rem;
+  font-family:'VeneerTwo-Reg';
+  color: #FFFAFA;
+  padding: 2rem;
+  text-align: left;
+  display: flex;
+  margin: 0rem;
+  padding-bottom: 1rem;
+}
+
+#posterTextLittle {
+  font-size: 1rem;
+  font-family:'VeneerTwo-Reg';
+  color: #FFFAFA;
+  text-align: left;
+  display: flex;
+  padding: 2rem;
+  padding-top: 0rem;
+  margin: 0rem;
+
+}
+
 #productName {
   margin-top: 1rem;
   font-size: 3rem;
 }
+
 #productPrice {
   margin-top: 1rem;
   display: inline-block;
   font-size: 2.5rem;
 }
+
 nav {
   background-color: #2A2A30;
   align-self: center;
 }
+
 hr {
   margin: 2rem 0 1.5rem 0;
 }
-.navBar, .banner, .mainContainer, footer{
-  display:flex;
+
+.navBar, .banner, .mainContainer, footer {
+  display: flex;
   min-height: 56px;
 }
+
 .navBar {
   font-family: 'Lobster';
   background-color: #2A2A30;
@@ -101,12 +146,12 @@ hr {
   justify-content: space-between;
   z-index: 5;
   /* https://codepen.io/sdthornton/pen/wBZdXq */
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   padding: 1.5rem 2rem 1rem 2rem;
 }
 
 .mainContainer {
-  display:flex;
+  display: flex;
   margin-top: 2rem;
 }
 
@@ -130,16 +175,19 @@ footer {
   border: none;
   margin-top: 3rem;
 }
+
 footer p, footer h2, footer a {
   text-align: center;
   margin: 0 auto;
   color: #72848a;
   text-decoration: none;
 }
+
 footer h2 {
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
+
 footer p {
   margin-top: 0.5rem;
   margin-bottom: 2rem;
@@ -149,24 +197,26 @@ footer p {
 Widgets ELEMENTS -------------------
 */
 .bodyWrapper {
-  max-width:1080px;
+  max-width: 1080px;
   margin: 0 auto;
 }
-.description-box{
-  display: flex;
-  flex-direction: column;
-}
-.textfield-box{
+
+.description-box {
   display: flex;
   flex-direction: column;
 }
 
-.bodyWrapper-row{
+.textfield-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.bodyWrapper-row {
   margin: 0 auto;
   margin-top: 2rem;
   display: flex;
   flex-direction: row;
-  max-width:1080px;
+  max-width: 1080px;
 }
 
 .bottomright {
@@ -179,7 +229,7 @@ Widgets ELEMENTS -------------------
   text-shadow: 0 1px 3px rgba(255, 255, 255, 0.12), 0 1px 2px rgba(255, 255, 255, 0.24);
 }
 
-.sideMargin{
+.sideMargin {
   display: flex;
   flex: 1 0 0;
   position: relative;
@@ -189,15 +239,14 @@ Widgets ELEMENTS -------------------
   background-position: top center;
 }
 
-
-.banner{
+.banner {
   z-index: -1;
   background-size: contain;
-  display:flex;
-  max-height:412px;
+  display: flex;
+  max-height: 412px;
 }
 
-.banner img{
+.banner img {
   z-index: inherit;
   width: 100%;
   height: auto;
@@ -206,45 +255,53 @@ Widgets ELEMENTS -------------------
   margin-bottom: 1rem;
 }
 
-.bottom-banner{
-  display:flex;
+.bottom-banner {
+  display: flex;
   flex-direction: row;
   margin-top: 3rem;
 }
 
-.banner2{
+.banner2 {
   width: 50%;
   flex-direction: column;
   margin-right: 0.5rem;
 }
 
-.banner2-images, .about-images{
+.banner2-images, .about-images {
   width: 100%;
   height: 900px;
   background: url(../img/model-7.jpg);
   background-size: cover;
 }
-.about-images{
+
+.text-layer {
+  background-color: #34343450;
+  position: relative;
+  width: 100%;
   height: auto;
 }
 
-.banner2-column{
+.about-images {
+  height: auto;
+}
+
+.banner2-column {
   flex-direction: column;
   width: 50%;
 }
 
-.banner2-column-images{
-  width:100%;
-  height:447px;
+.banner2-column-images {
+  width: 100%;
+  height: 447px;
   margin-bottom: 0.5rem;
 }
 
-#banner2Column1{
+#banner2Column1 {
   background: url(../img/model-4.jpg);
   background-size: cover;
 }
 
-#banner2Column2{
+#banner2Column2 {
   background: url(../img/model-8.jpg);
   background-size: cover;
 }
@@ -253,33 +310,37 @@ Widgets ELEMENTS -------------------
   margin: 0rem;
 }
 
-.product-card-box{
+.product-card-box {
   max-width: 100%;
   text-align: center;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
   background-color: white;
   /* border: 1px solid #4c585d; */
   margin: 0;
 }
+
 .product-card-box:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
+
 .product-card-box h2 {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   transform: translateY(-75%);
 }
-.product-card-box p{
+
+.product-card-box p {
   font-size: 1.25rem;
-  margin:0;
-  padding:1rem 0 0.75rem 0;
+  margin: 0;
+  padding: 1rem 0 0.75rem 0;
   text-decoration: none;
   display: block;
   color: #E8EBEB;
   background-color: #4c585d;
 }
-#productImage{
+
+#productImage {
   width: calc(100% - 2rem);
   padding: 1rem 1rem 0 1rem;
 }
@@ -291,7 +352,7 @@ Widgets ELEMENTS -------------------
   padding: 0.75rem;
 }
 
-.aboutText{
+.aboutText {
   margin: 0 5rem;
   position: relative;
   top: 40%;
@@ -301,7 +362,6 @@ Widgets ELEMENTS -------------------
 /*
 Buttons/Forms ELEMENTS -------------------
 */
-
 .button-nav {
   display: inline-block;
   font-family: 'RangeMono-Reg';
@@ -324,11 +384,13 @@ Buttons/Forms ELEMENTS -------------------
   color: #E8EBEB;
   background-color: #4c585d;
   /* border-radius: 1px; */
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   text-decoration: none;
   -webkit-transition: all 0.25s;
-  transition: all 0.25s;;
+  transition: all 0.25s;
+  ;
 }
+
 .button-form {
   position: absolute;
   padding: 0.75rem 1rem;
@@ -338,7 +400,7 @@ Buttons/Forms ELEMENTS -------------------
   bottom: 0;
 }
 
-.button-help{
+.button-help {
   border-radius: 100px;
   font-size: 1.25rem;
   height: 2rem;
@@ -351,6 +413,7 @@ Buttons/Forms ELEMENTS -------------------
   display: inline-block;
   float: right;
 }
+
 .button-form:hover, .button-form:focus, .button-help:hover, .button-help:focus {
   cursor: pointer;
   display: block;
@@ -370,7 +433,7 @@ Buttons/Forms ELEMENTS -------------------
   display: inline-block;
 }
 
-input,textarea {
+input, textarea {
   background-color: white;
   font-family: 'RangeMono-Reg';
   font-size: 1rem;
@@ -391,7 +454,7 @@ select {
   /* border: 1px solid #4c585d; */
   border: none;
   border-right: 32px solid #4c585d;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   border-radius: 0px;
   /* http://jsfiddle.net/fMuPt/ */
   -webkit-appearance: none;
@@ -410,6 +473,7 @@ select {
   width: 100%;
   margin: auto
 }
+
 .selectWrap::after {
   content: '';
   pointer-events: none;
@@ -436,22 +500,25 @@ https://css-tricks.com/star-ratings/
   direction: rtl;
   text-align: left;
   font-size: 1.75rem;
-  float:right;
+  float: right;
   margin-top: 1rem;
   margin-right: 2rem;
 }
-.rating > span {
+
+.rating>span {
   display: inline-block;
   position: relative;
   color: #4c585d;
   width: 1.1em;
 }
-.rating > span:hover,
-.rating > span:hover ~ span {
+
+.rating>span:hover,
+.rating>span:hover~span {
   color: transparent;
 }
-.rating > span:hover:before,
-.rating > span:hover ~ span:before {
+
+.rating>span:hover:before,
+.rating>span:hover~span:before {
   content: "\2605";
   position: absolute;
   left: 0;
@@ -461,17 +528,26 @@ https://css-tricks.com/star-ratings/
 /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal */
 /* The Modal (background) */
 .modal, .modal2 {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -493,30 +569,34 @@ https://css-tricks.com/star-ratings/
 }
 
 .close:hover,
-.close:focus,.close2:hover,
+.close:focus, .close2:hover,
 .close2:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
 
-
 /* flickity slidesho/carousel */
 /* https://www.w3schools.com/w3css/w3css_slideshow.asp */
-.slideshow-container{
+.slideshow-container {
   object-fit: cover;
   width: 100%;
   max-height: 350px;
   overflow: hidden;
   background-color: white;
 }
-.slideshow-container img{
+
+.slideshow-container img {
   max-height: 350px;
   object-fit: contain;
   object-position: 50% 50%;
 }
-.mySlides {display:none;}
-.button-back, .button-forward{
+
+.mySlides {
+  display: none;
+}
+
+.button-back, .button-forward {
   background-color: #4c585d;
   border: none;
   color: transparent;
@@ -526,13 +606,15 @@ https://css-tricks.com/star-ratings/
   top: calc(350px * 0.5);
   transform: translateY(-50%);
   cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-.button-forward{
-  right:0;
+
+.button-forward {
+  right: 0;
   margin-right: 0.75rem;
 }
-.button-forward::after{
+
+.button-forward::after {
   content: '';
   pointer-events: none;
   position: absolute;
@@ -546,7 +628,8 @@ https://css-tricks.com/star-ratings/
   clear: both;
   margin-top: 0.65rem;
 }
-.button-back::after{
+
+.button-back::after {
   content: '';
   pointer-events: none;
   position: absolute;
