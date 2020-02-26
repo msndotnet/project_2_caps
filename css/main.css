@@ -108,7 +108,7 @@ h3 {
   color: #FFFAFA;
   text-align: left;
   display: flex;
-  padding: 2rem;
+  padding: 2.5rem;
   padding-top: 0rem;
   margin: 0rem;
 
@@ -304,6 +304,8 @@ Widgets ELEMENTS -------------------
 
 #banner2row1 {
   background: url(../img/model-10.jpg);
+  width: 100%;
+  height: 412px;
   background-size: cover;
 }
 
@@ -349,6 +351,7 @@ Widgets ELEMENTS -------------------
   display: block;
   color: #E8EBEB;
   background-color: #4c585d;
+  height: auto;
 }
 
 #productImage {
