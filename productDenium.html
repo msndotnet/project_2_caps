@@ -23,39 +23,102 @@
     <!-- This is Body Container -->
     <div class="bodyWrapper">
 
-      <div class="mainContainer">
-
-        <div class="halfColumn">
-          <h1>Purchase Confirmed</h1>
-        </div>
+      <!-- This is Product Container -->
+      <!-- <div class ="mainContainer", id="noMargin">
+      <div class = "halfColumn">
+        <p>Home > Shop > Product</9>
       </div>
+      <div class = "halfColumn">
+      </div>
+    </div>
+    <hr> -->
 
-      <div class="mainContainer noMargin">
+      <div class="mainContainer">
         <!-- Left Content Panel-->
         <div class="halfColumn">
-          <h2>Shipping to:</h2><br>
-          <p>Tommy Shelby<br><br>
-            Tipton Rd, Dudley <br>
-            DY1 4SQ, United Kingdom<br><br></p>
-          <p class="bold" style="position: absolute; bottom: 0; margin-bottom: 5rem;">Check your email (tshelby@gmail.com) for confirmation.</p>
-          <!-- Purchase Button-->
+          <h1 id="productName">The Denium Boy</h1>
           <div class="textfield-box">
-            <a href="contact.html" class="button-form">I didn't recieve confirmation</a>
+            <p>The Denium Boy is one of our new attempt
+              to reinvent flatcaps. With this new material
+              it should add the durability that will last. Pair
+              this with the perfect denium jacket to complete the look.
+            </p>
+            <p>
+              Approx.<br>
+              9 1/4" Length, Flat<br>
+              10 1/2" Width, Flat<br>
+              2 1/4" Double Snap Bill/Brim, Pre-Curved
+            </p>
+            <p>
+              Made of:<br>
+              10% Polyester<br>
+              90% Denium<br>
+            </p>
+          </div>
+
+          <h2 id="productPrice">£ 52.99</h2>
+          <!-- https://css-tricks.com/star-ratings/ -->
+          <div id="myBtn" class="rating">
+            <span>☆</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <!-- RATING POPUP -->
+          <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal -->
+          <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Reviews</h2>
+              <p>Review inputs and whatnot</p>
+              <div id="myBtn">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+              </div>
+              <p>Review inputs and whatnot</p>
+              <div id="myBtn">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p>Review inputs and whatnot</p>
+              <div id="myBtn">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <hr>
+              <textarea name="Textfield" rows="10" placeholder="Review" style="border: 1px solid #2A2A30;"></textarea>
+              <div id="myBtn" class="rating">
+                <span>☆</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <!-- Purchase Button-->
+              <a href="#" class="button-form">Submit</a>
+            </div>
           </div>
         </div>
 
         <!-- Right Content Panel-->
         <div class="halfColumn" style="padding-bottom: 5rem;">
-
+          <!-- Product Photo-->
+          <div class="banner">
+            <!-- <img src="img/tommy.jpg" alt="Placeholder" id="fullOpacity">/ -->
+            <!-- https://www.w3schools.com/w3css/w3css_slideshow.asp-->
+            <div class="slideshow-container">
+              <button class="button-back" onclick="plusDivs(-1)">&#10094;</button>
+              <button class="button-forward" onclick="plusDivs(1)">&#10095;</button>
+              <img class="mySlides" src="img/denim-caps-1.jpg" style="width:100%">
+              <img class="mySlides" src="img/model-11.jpg" style="width:100%">
+            </div>
+          </div>
+          <br>
           <!-- Selection Box-->
-          <h2>Order Details</h2><br>
+          <span class="bold">Size: </span>
+          <div class="selectWrap" style="width: 80%;">
+            <select>
+              <option selected disabled>Choose Size</option>
+              <option value="s">Small</option>
+              <option value="m">Medium</option>
+              <option value="l">Large</option>
+              <option value="l">Extra-Large</option>
+            </select>
+          </div>
 
-          <p><span class="bold">Order Number:</span> 524678<br><br>
-            8 Piece Baker Boy<br><br>
-            <span class="bold">Size:</span> Small<br><br>
-            <span class="bold">Price:</span> £49.00 Each<br><br></p>
-          <span class="bold">Quantity:</span> 1<br><br></p>
-
+          <!-- Help Button-->
+          <div class="button-help" id="myBtn2">?</div>
           <br>
           <!-- SIZE/HELP POPUP -->
           <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal -->
@@ -64,20 +127,68 @@
             <div class="modal-content">
               <span class="close2">&times;</span>
               <h2>Measurements</h2>
-              <p>Chart for head size measurements</p>
-
-              <img src="img/tommy.jpg" alt="Placeholder">
+              <table>
+                <tr>
+                  <th>OUR SIZE LABEL</th>
+                  <th>UK SIZE</th>
+                  <th>CENTIMETRES</th>
+                  <th>US SIZE</th>
+                  <th>INCHES</th>
+                </tr>
+                <tr>
+                  <td>S</td>
+                  <td>63⁄4</td>
+                  <td>55</td>
+                  <td>67⁄8</td>
+                  <td>21.7</td>
+                </tr>
+                <tr>
+                  <td>S/M</td>
+                  <td>67⁄8</td>
+                  <td>56</td>
+                  <td>7</td>
+                  <td>22</td>
+                </tr>
+                <tr>
+                  <td>M</td>
+                  <td>7</td>
+                  <td>57</td>
+                  <td>71⁄8</td>
+                  <td>22.4</td>
+                </tr>
+                <tr>
+                  <td>M/L</td>
+                  <td>71⁄8</td>
+                  <td>58</td>
+                  <td>71⁄4</td>
+                  <td>22.8</td>
+                </tr>
+                <tr>
+                  <td>L</td>
+                  <td>71⁄4</td>
+                  <td>59</td>
+                  <td>73⁄8</td>
+                  <td>23.2</td>
+                </tr>
+                <tr>
+                  <td>XL</td>
+                  <td>71⁄2</td>
+                  <td>61</td>
+                  <td>75⁄8</td>
+                  <td>24</td>
+                </tr>
+              </table>
+              <img src="https://www.stokes-int.com/uploads/media/tinymce/sources/W-XSAE901-Head-Chart.png" alt="head">
             </div>
           </div>
 
           <!-- Purchase Button-->
           <div class="textfield-box">
-            <!-- <a href="#" class="button-form">Confirm</a> -->
+            <a href="purchaseDenium.html" class="button-form">Purchase</a>
           </div>
         </div>
 
       </div>
-
       <hr>
       <div class="mainContainer noMargin">
         <div class="halfColumn">
