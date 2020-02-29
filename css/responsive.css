@@ -1,0 +1,28 @@
+@media only screen and (max-width: 750px) {
+  /* For mobile phones: */
+  .breakbox {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .mainContainer, #aboutBanner {
+    flex-direction: column;
+  } 
+
+  .halfColumn, #shopDropdown, #aboutBanner .banner2, #aboutBanner .banner2-column {
+    width: 100%;
+  }
+
+  .aboutText {
+    margin: 0 2rem;
+    top: auto;
+    transform: none;
+  }
+  .bodyWrapper-row {
+    flex-direction: column;
+  }
+  #letter {
+    display: none;
+  }
+}

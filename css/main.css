@@ -223,7 +223,7 @@ Widgets ELEMENTS -------------------
   z-index: 0;
   position: absolute;
   top: 230px;
-  right: 25%;
+  right: 20%;
   font-size: 1.25rem;
   color: white;
   background-color: #2A2A3075;
@@ -373,6 +373,12 @@ Widgets ELEMENTS -------------------
   transform: translateY(-40%);
 }
 
+.breakbox {
+  max-width: 50%;
+  display: flex;
+  flex-direction: row;
+}
+
 /*
 Buttons/Forms ELEMENTS -------------------
 */
@@ -501,6 +507,10 @@ select {
   border-top: 7px solid white;
   clear: both;
   margin-top: 0.5rem;
+}
+#shopDropdown {
+  width: calc(50% - 0.75rem); 
+  float: right;
 }
 
 /*
