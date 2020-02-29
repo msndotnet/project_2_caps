@@ -372,17 +372,6 @@ Widgets ELEMENTS -------------------
   top: 40%;
   transform: translateY(-40%);
 }
-#contactText {
-  position: absolute; 
-  bottom: 0; 
-  margin-bottom: 5rem;
-}
-
-.breakbox {
-  max-width: 50%;
-  display: flex;
-  flex-direction: row;
-}
 
 /*
 Buttons/Forms ELEMENTS -------------------
@@ -512,11 +501,6 @@ select {
   border-top: 7px solid white;
   clear: both;
   margin-top: 0.5rem;
-}
-
-#shopDropdown {
-  width: calc(50% - 0.75rem); 
-  float: right;
 }
 
 /*
