@@ -4,45 +4,84 @@
   display: flex;
   flex-direction: row;
 }
+
 #shopDropdown {
-  width: calc(50% - 0.75rem); 
+  width: calc(50% - 0.75rem);
   float: right;
 }
+
 #contactText {
-  position: absolute; 
-  bottom: 0; 
+  position: absolute;
+  bottom: 0;
   margin-bottom: 5rem;
 }
-#productRightBox{
+
+#productRightBox {
   padding-bottom: 5rem;
+}
+
+/* MOBILE STYLES FOR <1366PX */
+@media only screen and (max-width: 1366px) {
+  #banner2row1 {
+    background: url(../img/model-10-1024.jpg);
+    background-size: cover;
+  }
+
+  #banner2row1>.text-layer {
+    width: 100%;
+  }
+
+  a>.bottomright {
+    font-size: 1.5rem;
+    margin-top: 0rem;
+    padding-top: 1rem;
+    background-color: #2A2A30;
+    position: static;
+  }
+}
+
+/* MOBILE STYLES FOR <1024PX */
+@media only screen and (max-width: 1024px) {
+  #banner2Column1 {
+    background: url(../img/model-4-1024.jpg);
+    background-size: cover;
+  }
 }
 
 /* MOBILE STYLES FOR <750PX */
 @media only screen and (max-width: 750px) {
+
+  /*
   .halfColumn,  #aboutBanner .banner2, #aboutBanner .banner2-column {
     width: calc(100% - 1.5rem);
   }
+*/
   .mainContainer, #aboutBanner {
     flex-direction: column;
-  } 
+  }
+
   .breakbox {
     max-width: 100%;
     display: flex;
     flex-direction: row;
   }
+
   .halfColumn {
     padding: 0;
     margin-left: 0.75rem;
   }
+
   .aboutText {
     margin: 0 2rem;
     top: auto;
     transform: none;
     padding: 2rem 0;
   }
+
   .bodyWrapper-row {
     flex-direction: column;
   }
+
   .button-form {
     position: relative;
     padding: 0.75rem 1rem;
@@ -51,25 +90,99 @@
     width: calc(100% - 3.5rem);
     bottom: auto;
   }
+
   .rating {
     margin-right: 0;
-    margin-top:1.25rem;
+    margin-top: 1.25rem;
   }
 
   #shopDropdown {
     width: 100%;
   }
-  #productRightBox{
+
+  #productRightBox {
     padding-bottom: 0;
   }
-  #productRightBox .button-form{
+
+  #productRightBox .button-form {
     width: calc(100% + 0.5rem);
   }
+
   #letter {
     display: none;
   }
+
   #contactText {
-    bottom: auto; 
+    bottom: auto;
     margin-bottom: 0rem;
   }
+
+  .banner {
+    flex-direction: column;
+    max-height: 100rem;
+    margin-bottom: 1rem;
+  }
+
+  .banner img {
+    margin-bottom: 0px;
+  }
+
+  p.bold {
+    margin: 0rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+  }
+
+  .bodyWrapper {
+    margin-top: 1rem;
+  }
+
+  .bodyWrapper h1 {
+    margin: 1rem;
+  }
+
+  .bottomright h1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 3rem;
+  }
+
+  .bottom-banner {
+    flex-direction: column;
+  }
+
+  .banner2 {
+    width: 100%;
+    margin-right: 0rem;
+  }
+
+  .banner2-images {
+    height: 447px;
+  }
+
+  .banner2-column {
+    width: 100%;
+  }
+
+  #banner2row1 {
+    background: url(../img/model-10.jpg);
+  }
+
+  a.title {
+    text-align: center;
+    object-position: center;
+    padding: 1rem;
+    font-size: 2rem;
+  }
+
+  .navBar {
+    flex-direction: column;
+  }
+
+  a.button-nav {
+    margin: 0.8rem;
+  }
 }
+
+/* MOBILE STYLES FOR <750PX */
+@media only screen and (max-width: 375px) {}
