@@ -31,19 +31,7 @@
     width: 100%;
   }
 
-  a>.bottomright {
-    font-size: 1.5rem;
-    margin-top: 0rem;
-    padding-top: 1rem;
-    background-color: #2A2A3075;
-    position: absolute;
-  }
-}
-.modal .button-form {
-  position: relative; 
-  width: 30%; 
-  float: right; 
-  bottom: 3.25rem;
+
 }
 
 /* MOBILE STYLES FOR <1024PX */
@@ -51,6 +39,27 @@
   #banner2Column1 {
     background: url(../img/model-4-1024.jpg);
     background-size: cover;
+  }
+
+  a>.bottomright {
+    font-size: 1.5rem;
+    margin-top: 0rem;
+    padding-top: 1rem;
+    background-color: #2A2A3075;
+    position: absolute;
+  }
+
+.modal .button-form {
+  position: relative;
+  width: 30%;
+  float: right;
+  bottom: 3.25rem;
+}
+
+  .banner {
+    flex-direction: column;
+    max-height: 100rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -126,11 +135,6 @@
     margin-bottom: 0rem;
   }
 
-  .banner {
-    flex-direction: column;
-    max-height: 100rem;
-    margin-bottom: 1rem;
-  }
 
   .banner img {
     margin-bottom: 0px;
@@ -186,7 +190,7 @@
 
   .navBar {
     flex-direction: column;
-    
+
   }
 
   a.button-nav {
@@ -203,6 +207,14 @@
     display: inline-block;
     bottom: 7rem;
   }
+
+  a>.bottomright {
+  font-size: 1.5rem;
+  margin-top: 0rem;
+  padding-top: 1rem;
+  background-color: #2A2A30;
+  position: static;
+}
 }
 
 /* MOBILE STYLES FOR <750PX */
