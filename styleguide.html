@@ -42,8 +42,31 @@
         <h3>Sample code:</h3>
         <code>&lt;a href="#" class="button-form"&gt;Form Button&lt;/a&gt;</code>
         <h3>Rendered element:</h3>
-        <a class="button-form" href="#">Form Button</a>
+        <a class="button-form" href="#" style="position: relative;">Form Button</a>
       </section>
+      <section>
+        <h2>Help Button</h2>
+        <h3>CSS selector:</h3>
+        <p>.button-help</p>
+        <h3>Sample code:</h3>
+        <code>&lt;a href="#" class="button-help"&gt;?&lt;/a&gt;</code>
+        <h3>Rendered element:</h3>
+        <a class="button-help" href="#" style="float: left; display: block;">?</a><br><br><br>
+      </section>
+      <section>
+        <h2>Rating</h2>
+        <h3>CSS selector:</h3>
+        <p>#myBtn .rating</p>
+        <h3>Sample code:</h3>
+        <code>&lt;div id="myBtn" class="rating" style="float: left;"&gt;
+          &nbsp;&nbsp;&lt;span&gt;☆&lt;/span&gt;&lt;span&gt;★&lt;/span&gt;&lt;span&gt;★&lt;/span&gt;&lt;span&gt;★&lt;/span&gt;&lt;span&gt;★&lt;/span&gt;
+          &lt;/div&gt;
+        </code>
+        <h3>Rendered element:</h3>
+        <div id="myBtn" class="rating" style="float: left;">
+          <span>☆</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+      </section><br><br><br>
       <section>
         <h2>Text Input Field</h2>
         <h3>Sample code:</h3>
@@ -72,6 +95,32 @@
           <option value="l">Large</option>
         </select>
         </div>
+      </section>
+      <section>
+        <h2>Slideshow</h2>
+        <h3>CSS selector:</h3>
+        <p>.slideshow-container</p>
+        <h3>Sample code:</h3>
+        <code>&lt;div class="slideshow-container"&gt;
+          &nbsp;&nbsp;&lt;button class="button-back" onclick="plusDivs(-1)"&gt;&#10094;&lt;/button&gt;
+          &nbsp;&nbsp;&lt;button class="button-forward" onclick="plusDivs(1)"&gt;&#10095;&lt;/button&gt;
+          &nbsp;&nbsp;&lt;img class="mySlides" src="img/tommyHat.jpg" style="width:100%"&gt;
+          &nbsp;&nbsp;&lt;img class="mySlides" src="img/tommy.jpg" style="width:100%"&gt;
+          &lt;/div&gt;</code>
+        <h3>Rendered element:</h3>
+        <div class="halfColumn" id="productRightBox">
+          <!-- Product Photo-->
+          <div class="banner">
+            <!-- <img src="img/tommy.jpg" alt="Placeholder" id="fullOpacity">/ -->
+            <!-- https://www.w3schools.com/w3css/w3css_slideshow.asp-->
+            <div class="slideshow-container">
+              <button class="button-back" onclick="plusDivs(-1)">&#10094;</button>
+              <button class="button-forward" onclick="plusDivs(1)">&#10095;</button>
+              <img class="mySlides" src="img/tommyHat.jpg" style="width:100%">
+              <img class="mySlides" src="img/tommy.jpg" style="width:100%">
+            </div>
+          </div>
+        </div>  
       </section>
     </section>
     <!-- // INTERACTIVE ELEMENTS SECTION -->
@@ -133,58 +182,26 @@
       <section>
         <h2>Main Navigation</h2>
         <h3>Sample code:</h3>
-        <code>&lt;nav&gt;
+        <code>&lt;div class="navBar"&gt;
+          &nbsp;&nbsp;&lt;a class="title" href="index.html"&gt;Birmingham Brims&lt;/a&gt;
+          &nbsp;&nbsp;&lt;nav&gt;
           &nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="button-nav" href="#"&gt;Shop&lt;/a&gt;
           &nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="button-nav" href="#"&gt;About&lt;/a&gt;
           &nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="button-nav" href="#"&gt;Contact&lt;/a&gt;
-          &lt;/nav&gt;</code>
+          &nbsp;&nbsp;&lt;/nav&gt;
+          &lt;/div&gt;</code>
         <h3>Rendered element:</h3>
-        <nav><a class="button-nav" href="#">Shop</a><a class="button-nav" href="#">About</a><a class="button-nav" href="#">Contact</a></nav>
+        <div class="navBar">
+          <a class="title" href="index.html"> Birmingham Brims</a>
+          <nav>
+            <a class="button-nav" href="shop.html">Shop</a>
+            <a class="button-nav" href="about.html">About</a>
+            <a class="button-nav" href="contact.html">Contact</a>
+          </nav>
+        </div>
       </section>
       <section>
-        <h2>Product Listing</h2>
-        <h3>CSS selector:</h3>
-        <p>.block</p>
-        <h3>Sample code:</h3>
-        <code>&lt;div class="block"&gt;
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Product Name&lt;/h1&gt;
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Product Description&lt;/p&gt;
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Price&lt;/h2&gt;
-        &lt;/div&gt;
-        &lt;div class="block"&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src=" " alt=" " width="300"&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="bold"&gt;Size: &lt;/span&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;select&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option selected disabled&gt;Choose Size&lt;/option&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="s"&gt;Small&lt;/option&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="m"&gt;Medium&lt;/option&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="l"&gt;Large&lt;/option&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#" class="button-form"&gt;Purchase&lt;/a&gt;
-        &lt;/div&gt;</code>
-        <h3>Rendered element:</h3>
-        <div class="block">
-          <h1>Product Name</h1>
-          <p><span class="bold">Product Description</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-          <h2>Price</h2>
-        </div>
-        <div class="block">
-          <img src="img/tommy.jpg" alt="Placeholder" width="300">
-          <p>
-            <span class="bold">Size: </span>
-            <div class="selectWrap">
-            <select>
-              <option selected disabled>Choose Size</option>
-              <option value="s">Small</option>
-              <option value="m">Medium</option>
-              <option value="l">Large</option>
-            </select>
-            </div>
-          </p>
-          <a href="#" class="button-form">Purchase</a>
-        </div>
+
       </section>
     </section>
     <!-- // COMBINED ELEMENTS SECTION -->
@@ -196,5 +213,28 @@
     <p><a href="styleguide.html">Styleguide</a> | <a href="citations.html">Citations</a></p>
   </footer>
 
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = x.length
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+  </script>
 </body>
 </html>
