@@ -35,9 +35,15 @@
     font-size: 1.5rem;
     margin-top: 0rem;
     padding-top: 1rem;
-    background-color: #2A2A30;
-    position: static;
+    background-color: #2A2A3075;
+    position: absolute;
   }
+}
+.modal .button-form {
+  position: relative; 
+  width: 30%; 
+  float: right; 
+  bottom: 3.25rem;
 }
 
 /* MOBILE STYLES FOR <1024PX */
@@ -51,11 +57,14 @@
 /* MOBILE STYLES FOR <750PX */
 @media only screen and (max-width: 750px) {
 
-  /*
   .halfColumn,  #aboutBanner .banner2, #aboutBanner .banner2-column {
     width: calc(100% - 1.5rem);
   }
-*/
+
+  .navBar {
+    padding: 0;
+  }
+
   .mainContainer, #aboutBanner {
     flex-direction: column;
   }
@@ -171,18 +180,37 @@
   a.title {
     text-align: center;
     object-position: center;
-    padding: 1rem;
+    padding: 0.25rem 1rem;
     font-size: 2rem;
   }
 
   .navBar {
     flex-direction: column;
+    
   }
 
   a.button-nav {
     margin: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .modal-content img, .modal-content2 img{
+    width: 50%;
+    display: inline-block;
+  }
+  .modal .button-form {
+    width: 25%;
+    display: inline-block;
+    bottom: 7rem;
   }
 }
 
 /* MOBILE STYLES FOR <750PX */
-@media only screen and (max-width: 375px) {}
+@media only screen and (max-width: 375px) {
+  h1{
+    font-size: 2rem;
+  }
+  h2, h3{
+    font-size: 1.5rem;
+  }
+}

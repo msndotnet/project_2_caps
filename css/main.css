@@ -82,6 +82,22 @@ h1 {
   color: #2a2a30;
 }
 
+table {
+  display: inline-block;
+  border: none;
+  border-collapse: collapse;
+}
+th, td {
+  font-family: 'RangeMono-Light';
+  border: 1px solid #4c585d;
+  padding: 0.25rem 0.5rem;
+}
+th {
+  font-family: 'RangeMono-Reg';
+  background-color: #4c585d;
+  color: white;
+}
+
 h2 {
   font-size: 2rem;
   color: #4c585d;
@@ -581,7 +597,12 @@ https://css-tricks.com/star-ratings/
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 810px;
+  width: 90%;
+  max-width: 810px;
+}
+.modal-content img, .modal-content2 img{
+  width: 25%;
+  display: inline-block;
 }
 
 /* The Close Button */
