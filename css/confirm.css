@@ -1,0 +1,84 @@
+
+/* https://stackoverflow.com/questions/2703601/how-to-line-break-from-css-without-using-br*/
+p span{
+  font-size: 14px;
+  line-height: 2em;
+}
+
+#purchaseShippingBlock{
+  margin-bottom: 35px;
+  display: block;
+}
+
+#shippingToTextBlock{
+  display: block;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  margin-top:  0rem;
+  margin-bottom: 0.5rem;
+}
+
+#confirmationButton{
+  display: block;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  margin-top:  0rem;
+  margin-bottom: 3rem;
+}
+
+#checkEmail{
+  display: block;
+  margin: 0rem;
+  padding:0rem;
+  margin-bottom: 1rem;
+}
+
+#shippingHalfColumn{
+  margin:  0rem;
+  padding: 0rem;
+}
+
+#orderDetailsColumn{
+margin: 0rem;
+padding: 0rem;
+padding-left: 10.5px;
+}
+
+#orderDetailsTextBlock{
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
+
+/* Small Left Indent  with bottom margins*/
+#orderDetailsTextBoxIndent{
+  padding-left: 10.1rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+/*Left indent */
+#orderDetailsTextBlockIndent{
+  margin: 0rem;
+  padding:0rem;
+  padding-left:  0em;
+  padding-right:  1em;
+}
+
+#orderDetailsTextDisplayBlock{
+  display:flex;
+  margin: 0rem;
+  padding:0rem;
+  padding-left:  0em;
+  padding-right:  4em;
+}
+
+#sizeIndent{
+padding-left: 5.5rem;
+}
+
+#priceIndent{
+padding-left: 5rem;
+}
+
+#quantityIndent{
+padding-left: 2.8rem;
+}
