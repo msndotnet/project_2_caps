@@ -19,7 +19,7 @@ p span{
 }
 
 #confirmationButton{
-  display: block;
+  position: static;
   margin-left: 0rem;
   margin-right: 0rem;
   margin-top:  0rem;
