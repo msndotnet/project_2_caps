@@ -2,6 +2,7 @@
 <html lang="en">
 
   <head>
+    <title>Birmingham Brims</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
@@ -51,25 +52,14 @@
           <!-- Selection Box-->
           <h2>Order Details</h2><br>
 
-          <p><span class="bold">Order Number:</span> 524678<br><br>
-            The Denium<br><br>
+          <p><span class="bold" id="orderDetailsTextBlock">Order Number: </span>
+          524678
+          <span id="orderDetailsTextBoxIndent">     Denium</span><br><br>
             <span class="bold">Size:</span> Small<br><br>
             <span class="bold">Price:</span> £52.99 Each<br><br></p>
           <span class="bold">Quantity:</span> 1<br><br></p>
 
           <br>
-          <!-- SIZE/HELP POPUP -->
-          <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal -->
-          <div id="myModal2" class="modal2">
-            <!-- Modal content -->
-            <div class="modal-content">
-              <span class="close2">&times;</span>
-              <h2>Measurements</h2>
-              <p>Chart for head size measurements</p>
-
-              <img src="img/tommy.jpg" alt="Placeholder">
-            </div>
-          </div>
 
           <!-- Purchase Button-->
           <div class="textfield-box">
@@ -95,7 +85,7 @@
         <div class="breakbox">
           <a href="product.html" style="text-decoration: none; margin: 0.75rem;">
             <div class="product-card-box">
-              <img id="productImage" src="img/mens-caps-6.jpg" alt="cap">
+              <img class="productImage" src="img/mens-caps-6.jpg" alt="cap">
               <h2>Baker Boy</h2>
               <p class="bold">£45.00</p>
             </div>
@@ -103,7 +93,7 @@
 
           <a href="productDenium.html" style="text-decoration: none;margin: 0.75rem;">
             <div class="product-card-box">
-              <img id="productImage" src="img/denim-caps-1.jpg" alt="cap">
+              <img class="productImage" src="img/denim-caps-1.jpg" alt="cap">
               <h2>Denium</h2>
               <p class="bold">£52.99</p>
             </div>
@@ -112,7 +102,7 @@
         <div class="breakbox">
           <a href="product.html" style="text-decoration: none;margin: 0.75rem;">
             <div class="product-card-box">
-              <img id="productImage" src="img/mens-caps-5.jpg" alt="cap">
+              <img class="productImage" src="img/mens-caps-5.jpg" alt="cap">
               <h2 style="color: #b1a071;">Lagoon</h2>
               <p class="bold" style="background-color: #b1a071;">£35.00 <span style="text-decoration: line-through;">£45.00</span></p>
             </div>
@@ -120,7 +110,7 @@
 
           <a href="product.html" style="text-decoration: none;margin: 0.75rem;">
             <div class="product-card-box">
-              <img id="productImage" src="img/mens-caps-1.jpg" alt="cap">
+              <img class="productImage" src="img/mens-caps-1.jpg" alt="cap">
               <h2>Ardor</h2>
               <p class="bold">£45.00</p>
             </div>
@@ -130,86 +120,11 @@
 
     </div>
 
-    <footer class="noMargin">
+    <footer>
       <h2>Birminham Brims</h2>
       <p><a href="styleguide.html">Styleguide</a> | <a href="citations.html">Citations</a> | <a href="https://github.com/msndotnet/project_2_caps">GitHub</a></p>
     </footer>
 
-
-    <!-- POPUP SCRIPT -->
-    <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal -->
-    <script>
-      // Get the modal
-      var modal = document.getElementById("myModal");
-      // Get the button that opens the modal
-      var btn = document.getElementById("myBtn");
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
-      // When the user clicks the button, open the modal
-      btn.onclick = function() {
-        modal.style.display = "block";
-        buttonBack.style.display = "none";
-        buttonFor.style.display = "none";
-      }
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function() {
-        modal.style.display = "none";
-        buttonBack.style.display = "block";
-        buttonFor.style.display = "block";
-      }
-
-      // Second one
-      var modal2 = document.getElementById("myModal2");
-      var btn2 = document.getElementById("myBtn2");
-      var span2 = document.getElementsByClassName("close2")[0];
-      var buttonBack = document.getElementsByClassName("button-back")[0];
-      var buttonFor = document.getElementsByClassName("button-forward")[0];
-      btn2.onclick = function() {
-        modal2.style.display = "block";
-        buttonBack.style.display = "none";
-        buttonFor.style.display = "none";
-      }
-      span2.onclick = function() {
-        modal2.style.display = "none";
-        buttonBack.style.display = "block";
-        buttonFor.style.display = "block";
-      }
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-        if (event.target == modal2) {
-          modal2.style.display = "none";
-          buttonBack.style.display = "block";
-          buttonFor.style.display = "block";
-        } else if (event.target == modal) {
-          modal.style.display = "none";
-          buttonBack.style.display = "block";
-          buttonFor.style.display = "block";
-        }
-      }
-    </script>
-    <script>
-      var slideIndex = 1;
-      showDivs(slideIndex);
-
-      function plusDivs(n) {
-        showDivs(slideIndex += n);
-      }
-
-      function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        if (n > x.length) {
-          slideIndex = 1
-        }
-        if (n < 1) {
-          slideIndex = x.length
-        }
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-        x[slideIndex - 1].style.display = "block";
-      }
-    </script>
   </body>
 
 </html>
