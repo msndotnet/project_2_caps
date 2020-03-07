@@ -49,17 +49,21 @@
     position: absolute;
   }
 
-.modal .button-form {
-  position: relative;
-  width: 30%;
-  float: right;
-  bottom: 3.25rem;
-}
+  .modal .button-form {
+    position: relative;
+    width: 30%;
+    float: right;
+    bottom: 3.25rem;
+  }
 
   .banner {
     flex-direction: column;
     max-height: 100rem;
     margin-bottom: 1rem;
+  }
+
+  #text-layer-height {
+    max-height: 14rem;
   }
 }
 
@@ -208,12 +212,16 @@
   }
 
   a>.bottomright {
-  font-size: 1.5rem;
-  margin-top: 0rem;
-  padding-top: 1rem;
-  background-color: #2A2A30;
-  position: static;
-}
+    font-size: 1.5rem;
+    margin-top: 0rem;
+    padding-top: 1rem;
+    background-color: #2A2A30;
+    position: static;
+  }
+
+  #text-layer-height {
+    max-height: 12rem;
+  }
 }
 
 /* MOBILE STYLES FOR <750PX */

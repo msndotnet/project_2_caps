@@ -317,6 +317,10 @@ Widgets ELEMENTS -------------------
   width: 100%;
   height: auto;
 }
+#text-layer-height {
+  max-height: 12rem;
+}
+
 
 .banner2-column {
   flex-direction: column;
